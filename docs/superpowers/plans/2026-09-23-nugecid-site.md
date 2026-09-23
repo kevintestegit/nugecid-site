@@ -2091,7 +2091,23 @@ por:
 
 - [ ] **Step 2: `ojs.html` — nova seção "Como submeter"**
 
-Inserir antes de `<h2>Acesso</h2>`:
+Substituir:
+
+```html
+  <section class="section">
+    <div class="wrap">
+      <h2>Como submeter</h2>
+```
+
+por (a seção usa `prose` para listas e largura de linha consistentes):
+
+```html
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Como submeter</h2>
+```
+
+Se a seção ainda não existir, inserir antes de `<h2>Acesso</h2>`:
 
 ```html
       <h2>Como submeter</h2>
@@ -2102,6 +2118,28 @@ Inserir antes de `<h2>Acesso</h2>`:
         <li>Após aprovação, o artigo entra na edição em preparação.</li>
       </ol>
       <!-- CONFIRMAR: diretrizes para autores, secoes e periodicidade com a equipe editorial -->
+```
+
+- [ ] **Step 2b: `assets/css/site.css` — listas ordenadas**
+
+Substituir:
+
+```css
+.prose ul { padding-left: 1.2rem; max-width: 72ch; }
+```
+
+por:
+
+```css
+.prose ul, .prose ol { padding-left: 1.2rem; max-width: 72ch; }
+```
+
+- [ ] **Step 2c: `dspace.html` — remover comentário obsoleto**
+
+Remover a linha (os nomes de comunidades e coleções já foram confirmados no repositório):
+
+```html
+      <!-- CONFIRMAR: nomes das comunidades e colecoes com a equipe do NUGECID -->
 ```
 
 - [ ] **Step 3: `dspace.html` — o que o repositório reúne, detalhado**
