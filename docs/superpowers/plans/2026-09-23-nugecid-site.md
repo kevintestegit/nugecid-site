@@ -1685,6 +1685,183 @@ git commit -m "feat: adota nome Policia Cientifica do RN (LC 795/2025) e fixa ar
 
 ---
 
+### Task 12: Contato oficial e prints dos sistemas
+
+**Files:**
+- Modify: `index.html`, `sgc.html`, `ojs.html`, `dspace.html`, `noticias.html`,
+  `noticia-lancamento-livro.html`, `noticia-sistemas-implantacao.html`, `sobre.html`
+- Modify: `assets/css/site.css`
+- Assets já presentes: `assets/img/sgc-dashboard.webp` (1280x651),
+  `assets/img/sgc-desarquivamentos.webp` (1280x651), `assets/img/ojs-home.webp` (1280x647),
+  `assets/img/dspace-home.webp` (1280x800), `assets/img/dspace-comunidades.webp` (1280x800),
+  `assets/img/dspace-item.webp` (1280x800)
+
+- [ ] **Step 1: Rodapé com contato (7 páginas: index, sgc, ojs, dspace, noticias e os 2 posts)**
+
+Substituir:
+
+```html
+    <p>Contato: CONTATO_A_DEFINIR · <a href="sobre.html">Sobre e contato</a></p>
+```
+
+por:
+
+```html
+    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
+    <a href="tel:+558432326928">(84) 3232-6928</a> ·
+    <a href="sobre.html">Sobre e contato</a></p>
+```
+
+E remover a linha de comentário, quando existir (index, sgc, ojs, dspace):
+
+```html
+    <!-- CONFIRMAR: e-mail e telefone oficiais -->
+```
+
+- [ ] **Step 2: `sobre.html` — seção Contato e rodapé**
+
+Substituir:
+
+```html
+      <!-- CONFIRMAR: e-mail, telefone, endereco e horario oficiais -->
+      <p>E-mail: CONTATO_A_DEFINIR<br>
+      Telefone: CONTATO_A_DEFINIR<br>
+      Endereço: CONTATO_A_DEFINIR</p>
+```
+
+por:
+
+```html
+      <!-- CONFIRMAR: endereco e horario oficiais -->
+      <p>E-mail: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a><br>
+      Telefone: <a href="tel:+558432326928">(84) 3232-6928</a><br>
+      Endereço: CONTATO_A_DEFINIR</p>
+```
+
+E no rodapé do `sobre.html`, substituir:
+
+```html
+    <p>Contato: CONTATO_A_DEFINIR</p>
+```
+
+por:
+
+```html
+    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
+    <a href="tel:+558432326928">(84) 3232-6928</a></p>
+```
+
+- [ ] **Step 3: `assets/css/site.css` — estilo dos prints**
+
+Adicionar após o bloco `/* Ficha catalografica */` (antes de `/* Carimbo */`):
+
+```css
+/* Prints dos sistemas */
+.print { margin: 0 0 1.5rem; }
+.print img { border: 1px solid var(--kraft); border-radius: var(--radius); }
+.print figcaption {
+  margin-top: 0.5rem;
+  font: 400 0.8rem/1.4 "IBM Plex Mono", monospace;
+  color: var(--archive);
+}
+```
+
+- [ ] **Step 4: `sgc.html` — substituir o placeholder pelos prints**
+
+Substituir:
+
+```html
+      <!-- CONFIRMAR: substituir por prints reais (assets/img/sgc-*.webp), com width, height, alt e loading="lazy" -->
+      <p>Imagens do sistema serão publicadas aqui após revisão institucional.</p>
+```
+
+por:
+
+```html
+      <div class="grid-2">
+        <figure class="print">
+          <img src="assets/img/sgc-dashboard.webp" width="1280" height="651" loading="lazy"
+            alt="Dashboard do SGC com cartões de indicadores e gráficos de desarquivamentos">
+          <figcaption>Dashboard com estatísticas operacionais</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-desarquivamentos.webp" width="1280" height="651" loading="lazy"
+            alt="Tela de desarquivamentos do SGC com lista de processos e filtros">
+          <figcaption>Gestão de desarquivamentos</figcaption>
+        </figure>
+      </div>
+```
+
+- [ ] **Step 5: `ojs.html` — print da página inicial**
+
+Substituir:
+
+```html
+        <li>Acesso aberto ao conteúdo publicado.</li>
+      </ul>
+```
+
+por:
+
+```html
+        <li>Acesso aberto ao conteúdo publicado.</li>
+      </ul>
+      <figure class="print">
+        <img src="assets/img/ojs-home.webp" width="1280" height="647" loading="lazy"
+          alt="Página inicial da Revista da Polícia Científica do RN no Open Journal Systems">
+        <figcaption>Página inicial da revista</figcaption>
+      </figure>
+```
+
+- [ ] **Step 6: `dspace.html` — prints do repositório**
+
+Substituir:
+
+```html
+      <p>O material é organizado em comunidades e coleções, com metadados padronizados que
+      facilitam a busca e a citação.</p>
+```
+
+por:
+
+```html
+      <p>O material é organizado em comunidades e coleções, com metadados padronizados que
+      facilitam a busca e a citação.</p>
+      <div class="grid-2">
+        <figure class="print">
+          <img src="assets/img/dspace-home.webp" width="1280" height="800" loading="lazy"
+            alt="Página inicial do Repositório Institucional com busca e últimas publicações">
+          <figcaption>Página inicial do repositório</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-comunidades.webp" width="1280" height="800" loading="lazy"
+            alt="Lista de comunidades do repositório institucional">
+          <figcaption>Comunidades do acervo</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-item.webp" width="1280" height="800" loading="lazy"
+            alt="Página de um documento no repositório, com metadados e arquivo para download">
+          <figcaption>Página de um documento depositado</figcaption>
+        </figure>
+      </div>
+```
+
+- [ ] **Step 7: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add index.html sgc.html ojs.html dspace.html sobre.html noticias.html \
+  noticia-lancamento-livro.html noticia-sistemas-implantacao.html \
+  assets/css/site.css assets/img
+git commit -m "feat: contato oficial e prints dos sistemas"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,
