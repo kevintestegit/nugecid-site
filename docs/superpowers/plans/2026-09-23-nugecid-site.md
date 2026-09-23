@@ -1450,8 +1450,244 @@ em todas as páginas, selos e fichas aparecem corretos.
 
 ---
 
+### Task 11: Renomeação do órgão (LC 795/2025) e fix do `aria-current`
+
+**Contexto:** A Lei Complementar nº 795, de 08/10/2025 (DOE 09/10/2025) renomeou o
+"Instituto Técnico-Científico de Perícia do Rio Grande do Norte (ITEP/RN)" para
+**Polícia Científica do Rio Grande do Norte**. Decisão aprovada: usar só o nome novo,
+com nota histórica onde o texto citar fatos de 2023–2024. Esta tarefa substitui os
+nomes nas tarefas anteriores.
+
+**Files:**
+- Modify: `index.html`, `sgc.html`, `ojs.html`, `dspace.html`, `sobre.html`,
+  `noticias.html`, `noticia-lancamento-livro.html`, `noticia-sistemas-implantacao.html`
+- Modify: `assets/css/site.css`
+
+- [ ] **Step 1: Marca do header (8 páginas)**
+
+Em cada um dos 8 arquivos HTML, substituir:
+
+```html
+<span class="brand-mark">ITEP-RN</span>
+```
+
+por:
+
+```html
+<span class="brand-mark">PCIRN</span>
+```
+
+- [ ] **Step 2: Rodapé (8 páginas)**
+
+Em cada um dos 8 arquivos HTML, substituir:
+
+```html
+<p>Instituto Técnico-Científico de Perícia do Rio Grande do Norte — ITEP-RN</p>
+```
+
+por:
+
+```html
+<p>Polícia Científica do Rio Grande do Norte</p>
+```
+
+- [ ] **Step 3: `index.html`**
+
+```text
+<title>NUGECID — Memória, informação e conhecimento do ITEP-RN</title>
+→ <title>NUGECID — Memória, informação e conhecimento da Polícia Científica do RN</title>
+
+content="Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória do ITEP-RN: gestão documental, memória institucional, repositório digital e periódico científico."
+→ content="Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória da Polícia Científica do RN: gestão documental, memória institucional, repositório digital e periódico científico."
+
+content="NUGECID — Memória, informação e conhecimento do ITEP-RN"
+→ content="NUGECID — Memória, informação e conhecimento da Polícia Científica do RN"
+
+content="Gestão documental, memória institucional, repositório digital e periódico científico do ITEP-RN."
+→ content="Gestão documental, memória institucional, repositório digital e periódico científico da Polícia Científica do RN."
+
+científica do Instituto Técnico-Científico de Perícia do Rio Grande do Norte.
+→ científica da Polícia Científica do Rio Grande do Norte.
+
+<p>Pesquisa, preserva e dá acesso à história do ITEP-RN, com a Comissão Permanente de
+→ <p>Pesquisa, preserva e dá acesso à história da instituição, com a Comissão Permanente de
+
+<dt>Situação</dt><dd>Em uso na PCIRN/ITEP-RN</dd>
+→ <dt>Situação</dt><dd>Em uso na PCIRN</dd>
+
+<dt>Nome</dt><dd>Repositório Institucional do ITEP-RN</dd>
+→ <dt>Nome</dt><dd>Repositório Institucional da Polícia Científica do RN</dd>
+
+<a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
+→ <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
+```
+
+E na seção do livro, após o parágrafo que termina em "ISBN 978-65-01-06618-9.", acrescentar:
+
+```html
+      <p>O livro foi publicado em 2024, quando o órgão ainda se chamava Instituto
+      Técnico-Científico de Perícia do Rio Grande do Norte (ITEP-RN), renomeado pela
+      Lei Complementar nº 795, de 8 de outubro de 2025.</p>
+```
+
+- [ ] **Step 4: `sgc.html`**
+
+```text
+content="Sistema interno de gestão de documentos e desarquivamentos da PCIRN/ITEP-RN."
+→ content="Sistema interno de gestão de documentos e desarquivamentos da PCIRN."
+
+<p>O acesso é restrito à rede institucional da PCIRN/ITEP-RN, por se tratar de sistema
+→ <p>O acesso é restrito à rede institucional da PCIRN, por se tratar de sistema
+```
+
+- [ ] **Step 5: `ojs.html`**
+
+```text
+content="Periódico científico em acesso aberto mantido pelo NUGECID/ITEP-RN."
+→ content="Periódico científico em acesso aberto mantido pelo NUGECID."
+
+<p class="lead">Periódico científico do ITEP-RN, mantido pelo NUGECID e publicado em
+→ <p class="lead">Periódico científico da Polícia Científica do RN, mantido pelo NUGECID e publicado em
+```
+
+- [ ] **Step 6: `dspace.html`**
+
+```text
+content="Repositório institucional do ITEP-RN em DSpace: portarias, publicações institucionais, acervo de memória e produção científica, mantido pelo NUGECID."
+→ content="Repositório institucional da Polícia Científica do RN em DSpace: portarias, publicações institucionais, acervo de memória e produção científica, mantido pelo NUGECID."
+
+content="Repositório Institucional do ITEP-RN — DSpace"
+→ content="Repositório Institucional da Polícia Científica do RN — DSpace"
+
+content="Portarias, publicações e acervo de memória do ITEP-RN em acesso aberto."
+→ content="Portarias, publicações e acervo de memória da Polícia Científica do RN em acesso aberto."
+
+<h1>Repositório Institucional do ITEP-RN</h1>
+→ <h1>Repositório Institucional da Polícia Científica do RN</h1>
+
+<li>Portarias e atos normativos do ITEP-RN.</li>
+→ <li>Portarias e atos normativos da Polícia Científica do RN.</li>
+
+<p>Servidores e setores do ITEP-RN podem encaminhar documentos e acervos ao NUGECID para
+→ <p>Servidores e setores da Polícia Científica do RN podem encaminhar documentos e acervos ao NUGECID para
+```
+
+- [ ] **Step 7: `sobre.html`**
+
+```text
+content="Conheça o NUGECID do ITEP-RN: criação pela Portaria 127/2023, atribuições de gestão documental e memória institucional, equipe e contato."
+→ content="Conheça o NUGECID da Polícia Científica do RN: criação pela Portaria 127/2023, atribuições de gestão documental e memória institucional, equipe e contato."
+
+content="Sobre o NUGECID — ITEP-RN"
+→ content="Sobre o NUGECID — Polícia Científica do RN"
+
+content="Gestão documental, memória institucional e informação no ITEP-RN."
+→ content="Gestão documental, memória institucional e informação na Polícia Científica do RN."
+
+vinculado à Diretoria Geral do ITEP-RN e responde pela gestão documental, pela informação
+→ vinculado à Diretoria Geral da Polícia Científica do Rio Grande do Norte (à época da
+criação, ITEP-RN) e responde pela gestão documental, pela informação
+
+<li>Assessorar a gestão documental produzida e acumulada pelo ITEP-RN.</li>
+→ <li>Assessorar a gestão documental produzida e acumulada pela Polícia Científica do RN.</li>
+```
+
+- [ ] **Step 8: `noticias.html`**
+
+```text
+<title>Notícias | NUGECID — ITEP-RN</title>
+→ <title>Notícias | NUGECID — Polícia Científica do RN</title>
+
+content="Notícias do Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória do ITEP-RN."
+→ content="Notícias do Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória da Polícia Científica do RN."
+
+content="Notícias | NUGECID — ITEP-RN"
+→ content="Notícias | NUGECID — Polícia Científica do RN"
+
+content="Publicações e novidades do NUGECID/ITEP-RN."
+→ content="Publicações e novidades do NUGECID."
+
+<a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
+→ <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
+```
+
+- [ ] **Step 9: `noticia-lancamento-livro.html`**
+
+```text
+<title>ITEP-RN lança livro sobre a trajetória da perícia criminal | NUGECID</title>
+→ <title>Polícia Científica do RN lança livro sobre a trajetória da perícia criminal | NUGECID</title>
+
+content="O livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte reúne pesquisa da Comissão Permanente de Gestão da Memória do ITEP-RN."
+→ content="O livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte reúne pesquisa da Comissão Permanente de Gestão da Memória (à época, ITEP-RN)."
+
+content="ITEP-RN lança livro sobre a trajetória da perícia criminal"
+→ content="Polícia Científica do RN lança livro sobre a trajetória da perícia criminal"
+
+content="Pesquisa da CPGM resgata a memória institucional do ITEP-RN."
+→ content="Pesquisa da CPGM resgata a memória institucional da Polícia Científica do RN."
+
+<h1>ITEP-RN lança livro sobre a trajetória da perícia criminal</h1>
+→ <h1>Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</h1>
+
+<p>O Instituto Técnico-Científico de Perícia do Rio Grande do Norte publicou o livro
+→ <p>A Polícia Científica do Rio Grande do Norte publicou o livro
+```
+
+E no fim do último parágrafo do post (o que termina em "repositório institucional em
+implantação."), acrescentar a frase:
+
+```text
+ O livro foi publicado em 2024, quando o órgão ainda se chamava ITEP-RN, renomeado
+ pela Lei Complementar nº 795, de 8 de outubro de 2025.
+```
+
+- [ ] **Step 10: `noticia-sistemas-implantacao.html`**
+
+```text
+content="Repositório em DSpace e revista em OJS ampliam o acesso à informação do ITEP-RN."
+→ content="Repositório em DSpace e revista em OJS ampliam o acesso à informação da Polícia Científica do RN."
+
+implantação de dois sistemas que ampliam o acesso à informação do ITEP-RN: o repositório
+→ implantação de dois sistemas que ampliam o acesso à informação da Polícia Científica
+do RN: o repositório
+```
+
+- [ ] **Step 11: `assets/css/site.css`**
+
+O estado ativo do menu deve valer para `aria-current="page"` (páginas) e
+`aria-current="true"` (posts). Substituir:
+
+```css
+.site-nav a[aria-current="page"] { background: var(--kraft); color: var(--ink); }
+```
+
+por:
+
+```css
+.site-nav a[aria-current] { background: var(--kraft); color: var(--ink); }
+```
+
+- [ ] **Step 12: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+Run: `grep -rn "ITEP" *.html | grep -v "à época" | grep -v "renomeado pela" | grep -v "renomeado" | grep -v "Lei Complementar"` (ou inspeção manual)
+Expected: nenhuma ocorrência de ITEP fora das notas históricas.
+
+- [ ] **Step 13: Commit**
+
+```bash
+git add index.html sgc.html ojs.html dspace.html sobre.html noticias.html \
+  noticia-lancamento-livro.html noticia-sistemas-implantacao.html assets/css/site.css
+git commit -m "feat: adota nome Policia Cientifica do RN (LC 795/2025) e fixa aria-current"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,
 título do hero, nomes da equipe, prints dos sistemas, seções/ISSN da revista, comunidades do
-repositório e logo do ITEP-RN (ainda não usado no layout — o header usa texto).
+repositório e logo do órgão (ainda não usado no layout — o header usa texto).
+

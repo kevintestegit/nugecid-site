@@ -9,6 +9,10 @@ O NUGECID (Núcleo de Gestão do Conhecimento, Informação, Documentação e Me
 ITEP-RN (Instituto Técnico-Científico de Perícia do Rio Grande do Norte) precisa de um
 site institucional público que também sirva de vitrine dos seus três sistemas:
 
+> **Nota (2026-09-23):** o órgão foi renomeado para **Polícia Científica do Rio Grande do
+> Norte** pela Lei Complementar nº 795, de 08/10/2025 (DOE 09/10/2025). O site usa o nome
+> novo, com nota histórica onde o texto citar fatos de 2023–2024 (ver Task 11 do plano).
+
 - **SGC** — Sistema de Gestão de Documentos e Desarquivamentos (uso interno, PCIRN).
 - **OJS** — Revista da Polícia Científica do Rio Grande do Norte (RPCIRN), periódico
   científico mantido pelo Núcleo.
