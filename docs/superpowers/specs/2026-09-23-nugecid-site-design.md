@@ -71,7 +71,7 @@ Escolhida em mockup no companion visual (3 refinamentos apresentados; B aprovado
 | `--kraft` | `#d9c9a3` | bordas, faixas, hover |
 | `--ink` | `#2a2620` | texto, header, footer |
 | `--ink-soft` | `#5c5648` | texto secundário |
-| `--archive` | `#6f6a5e` | metadados, labels |
+| `--archive` | `#5f5a4e` | metadados, labels |
 | `--stamp` | `#a33127` | carimbo, links, destaque |
 
 Contraste mínimo AA em todas as combinações texto/fundo.
