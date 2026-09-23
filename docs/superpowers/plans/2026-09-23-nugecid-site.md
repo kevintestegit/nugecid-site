@@ -180,10 +180,11 @@ git commit -m "chore: script de verificacao do site estatico"
   --kraft: #d9c9a3;
   --ink: #2a2620;
   --ink-soft: #5c5648;
-  --archive: #6f6a5e;
+  --archive: #5f5a4e;
   --stamp: #a33127;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --radius: 3px;
+  --key-w: 6.5rem;
   --wrap: 72rem;
 }
 
@@ -218,6 +219,7 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid var(--stamp);
   outline-offset: 2px;
 }
+.site-header a:focus-visible, .site-footer a:focus-visible { outline-color: var(--kraft); }
 
 .wrap { width: min(100% - 2.5rem, var(--wrap)); margin-inline: auto; }
 
@@ -256,6 +258,7 @@ a:focus-visible, button:focus-visible {
 
 @media (hover: hover) and (pointer: fine) {
   a:hover { color: var(--ink); }
+  .brand:hover { color: var(--kraft); }
   .site-nav a:hover { background: var(--kraft); color: var(--ink); }
   .btn:hover { background: var(--stamp); border-color: var(--stamp); color: #fff; }
   .btn--ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
@@ -307,9 +310,9 @@ a:focus-visible, button:focus-visible {
 }
 .ficha h3 { margin: 0; }
 .ficha dl { margin: 0; font: 400 0.82rem/1.7 "IBM Plex Mono", monospace; }
-.ficha dt { float: left; clear: left; width: 6.5rem; color: var(--archive); }
+.ficha dt { float: left; clear: left; width: var(--key-w); color: var(--archive); }
 .ficha dd {
-  margin: 0 0 0.35rem; padding-left: 6.5rem; padding-bottom: 0.35rem;
+  margin: 0 0 0.35rem; padding-left: var(--key-w); padding-bottom: 0.35rem;
   border-bottom: 1px dotted var(--kraft);
 }
 .ficha dd:last-of-type { border-bottom: 0; }
@@ -351,7 +354,7 @@ th {
 /* Rodape */
 .site-footer { background: var(--ink); color: var(--kraft); margin-top: 3rem; }
 .site-footer .wrap { padding-block: 2rem; }
-.site-footer p { font-size: 0.85rem; margin: 0 0 0.35rem; max-width: 80ch; }
+.site-footer p { font-size: 0.85rem; margin: 0 0 0.35rem; max-width: 72ch; }
 .site-footer a { color: var(--paper); }
 
 @media (prefers-reduced-motion: reduce) {
