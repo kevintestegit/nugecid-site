@@ -155,9 +155,9 @@ a:focus-visible, button:focus-visible {
 
 /* Livro em destaque */
 .livro { display: grid; gap: 1.5rem; }
+.livro-capa { margin-bottom: 0; }
 @media (min-width: 760px) {
   .livro { grid-template-columns: 260px 1fr; align-items: start; }
-  .livro-capa { margin-bottom: 0; }
 }
 
 /* Carimbo */
