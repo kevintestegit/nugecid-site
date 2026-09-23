@@ -527,13 +527,13 @@ git commit -m "feat: CSS do site com identidade dossie manila"
       <ul class="news-list">
         <!-- CONFIRMAR: data -->
         <li>
-          <time datetime="2024">2024</time>
-          <a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
+          <time datetime="2026">2026</time>
+          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
         </li>
         <!-- CONFIRMAR: data -->
         <li>
-          <time datetime="2026">2026</time>
-          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
+          <time datetime="2024">2024</time>
+          <a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
         </li>
       </ul>
     </div>
@@ -1150,13 +1150,13 @@ git commit -m "feat: pagina sobre o Nucleo e contato"
       <ul class="news-list">
         <!-- CONFIRMAR: data -->
         <li>
-          <time datetime="2024">2024</time>
-          <a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
+          <time datetime="2026">2026</time>
+          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
         </li>
         <!-- CONFIRMAR: data -->
         <li>
-          <time datetime="2026">2026</time>
-          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
+          <time datetime="2024">2024</time>
+          <a href="noticia-lancamento-livro.html">ITEP-RN lança livro sobre a trajetória da perícia criminal</a>
         </li>
       </ul>
     </div>
