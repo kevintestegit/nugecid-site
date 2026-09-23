@@ -1879,9 +1879,9 @@ Adicionar após o bloco `/* Prints dos sistemas */`:
 ```css
 /* Livro em destaque */
 .livro { display: grid; gap: 1.5rem; }
+.livro-capa { margin-bottom: 0; }
 @media (min-width: 760px) {
   .livro { grid-template-columns: 260px 1fr; align-items: start; }
-  .livro-capa { margin-bottom: 0; }
 }
 ```
 
@@ -1978,9 +1978,12 @@ por:
 
 - [ ] **Step 4: `sgc.html` — nova seção de integrações**
 
-Inserir antes de `<h2>Telas do sistema</h2>`:
+Inserir antes de `<h2>Telas do sistema</h2>` uma seção própria (a seção de Telas passa de
+`section--alt` para `section`, mantendo a alternância de fundos):
 
 ```html
+  <section class="section section--alt">
+    <div class="wrap prose">
       <h2>Integrações e recursos</h2>
       <ul>
         <li><strong>SEI</strong> — captura de processos do sistema eletrônico de informações.</li>
@@ -1988,7 +1991,16 @@ Inserir antes de `<h2>Telas do sistema</h2>`:
         <li><strong>Metabase</strong> — painéis de business intelligence.</li>
         <li><strong>OCR</strong> — reconhecimento de texto em documentos digitalizados.</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Telas do sistema</h2>
 ```
+
+A seção que hoje contém "Telas do sistema" deve terminar logo após o `</ul>` das
+integrações, e a seção de telas começa em `<section class="section">`.
 
 - [ ] **Step 5: `sgc.html` — seis prints**
 
