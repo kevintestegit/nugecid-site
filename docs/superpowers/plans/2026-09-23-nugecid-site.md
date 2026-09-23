@@ -2322,6 +2322,67 @@ git commit -m "fix: remove prints com dados sensiveis (arquivo e usuarios)"
 
 ---
 
+### Task 16: Link "Visualizar PDF" do livro
+
+**Files:**
+- Modify: `index.html`, `noticia-lancamento-livro.html`
+
+- [ ] **Step 1: `index.html` — botão na seção do livro**
+
+Substituir:
+
+```html
+      <div class="actions">
+        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+      </div>
+```
+
+por:
+
+```html
+      <div class="actions">
+        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+        <a class="btn btn--ghost" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
+          target="_blank" rel="noopener">Visualizar PDF
+          <span class="visually-hidden">(abre em nova aba)</span></a>
+      </div>
+```
+
+- [ ] **Step 2: `noticia-lancamento-livro.html` — botão no post**
+
+Substituir:
+
+```html
+      <div class="actions">
+        <a class="btn btn--ghost" href="noticias.html">Voltar às notícias</a>
+      </div>
+```
+
+por:
+
+```html
+      <div class="actions">
+        <a class="btn" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
+          target="_blank" rel="noopener">Visualizar PDF
+          <span class="visually-hidden">(abre em nova aba)</span></a>
+        <a class="btn btn--ghost" href="noticias.html">Voltar às notícias</a>
+      </div>
+```
+
+- [ ] **Step 3: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add index.html noticia-lancamento-livro.html
+git commit -m "feat: link para visualizar o PDF do livro"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,
