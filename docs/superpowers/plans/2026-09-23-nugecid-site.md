@@ -2269,6 +2269,59 @@ git commit -m "feat: paginas do OJS e do DSpace detalhadas com mais prints"
 
 ---
 
+### Task 15: Remover prints com dados sensíveis
+
+**Motivo:** os prints `sgc-arquivo-prateleiras.webp` (Organização do arquivo) e
+`sgc-usuarios.webp` (Usuários e perfis de acesso) expõem dados internos (localização do
+acervo e nomes/perfis de servidores). Remover do site e do repositório.
+
+**Files:**
+- Modify: `sgc.html`
+- Delete: `assets/img/sgc-arquivo-prateleiras.webp`, `assets/img/sgc-usuarios.webp`
+
+- [ ] **Step 1: `sgc.html` — remover as duas figures**
+
+Remover os blocos:
+
+```html
+        <figure class="print">
+          <img src="assets/img/sgc-arquivo-prateleiras.webp" width="1280" height="653" loading="lazy"
+            alt="Tela do arquivo com organização das prateleiras e caixas">
+          <figcaption>Organização do arquivo</figcaption>
+        </figure>
+```
+
+```html
+        <figure class="print">
+          <img src="assets/img/sgc-usuarios.webp" width="1280" height="653" loading="lazy"
+            alt="Tela de gestão de usuários com perfis de acesso">
+          <figcaption>Usuários e perfis de acesso</figcaption>
+        </figure>
+```
+
+- [ ] **Step 2: apagar os arquivos**
+
+```bash
+git rm assets/img/sgc-arquivo-prateleiras.webp assets/img/sgc-usuarios.webp
+```
+
+- [ ] **Step 3: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+Run: `grep -rn "sgc-arquivo-prateleiras\|sgc-usuarios" *.html`
+Expected: nenhuma saída.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add sgc.html
+git commit -m "fix: remove prints com dados sensiveis (arquivo e usuarios)"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,
