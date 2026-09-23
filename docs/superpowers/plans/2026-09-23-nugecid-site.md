@@ -1212,7 +1212,7 @@ git commit -m "feat: pagina sobre o Nucleo e contato"
       <a href="ojs.html">OJS</a>
       <a href="dspace.html">DSpace</a>
       <a href="sobre.html">Sobre</a>
-      <a href="noticias.html" aria-current="page">Notícias</a>
+      <a href="noticias.html" aria-current="true">Notícias</a>
     </nav>
   </div>
 </header>
@@ -1291,7 +1291,7 @@ git commit -m "feat: pagina sobre o Nucleo e contato"
       <a href="ojs.html">OJS</a>
       <a href="dspace.html">DSpace</a>
       <a href="sobre.html">Sobre</a>
-      <a href="noticias.html" aria-current="page">Notícias</a>
+      <a href="noticias.html" aria-current="true">Notícias</a>
     </nav>
   </div>
 </header>
