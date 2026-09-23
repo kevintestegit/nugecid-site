@@ -51,7 +51,13 @@ class PageParser(HTMLParser):
 
 
 def is_external(href):
-    return href.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:"))
+    return href.startswith(
+        ("http://", "https://", "//", "mailto:", "tel:", "#", "data:")
+    )
+
+
+def local_target(href):
+    return (ROOT / href.split("#")[0].split("?")[0].lstrip("/")).resolve()
 
 
 def check():
@@ -74,16 +80,15 @@ def check():
         for href in parser.links:
             if not href or is_external(href):
                 continue
-            target = (ROOT / href.split("#")[0]).resolve()
-            if not target.exists():
+            if not local_target(href).exists():
                 errors.append(f"{rel}: link quebrado -> {href}")
         for href in parser.styles:
-            if not (ROOT / href).exists():
+            if not href or is_external(href):
+                continue
+            if not local_target(href).exists():
                 errors.append(f"{rel}: folha de estilo ausente -> {href}")
         for src, alt, loading in parser.imgs:
-            if is_external(src):
-                continue
-            if not (ROOT / src).exists():
+            if not is_external(src) and not local_target(src).exists():
                 errors.append(f"{rel}: imagem ausente -> {src}")
             if alt is None:
                 errors.append(f"{rel}: <img src={src}> sem alt")
