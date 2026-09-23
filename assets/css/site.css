@@ -153,6 +153,13 @@ a:focus-visible, button:focus-visible {
   color: var(--archive);
 }
 
+/* Livro em destaque */
+.livro { display: grid; gap: 1.5rem; }
+@media (min-width: 760px) {
+  .livro { grid-template-columns: 260px 1fr; align-items: start; }
+  .livro-capa { margin-bottom: 0; }
+}
+
 /* Carimbo */
 .stamp {
   display: inline-block;
