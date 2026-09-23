@@ -1862,6 +1862,363 @@ git commit -m "feat: contato oficial e prints dos sistemas"
 
 ---
 
+### Task 13: Home com capa do livro + SGC detalhado com 6 prints
+
+**Files:**
+- Modify: `index.html`, `sgc.html`, `assets/css/site.css`
+- Add: `assets/img/sgc-custodia-etiquetas.webp` (1280x653), `assets/img/sgc-relatorios.webp`
+  (1280x653), `assets/img/sgc-arquivo-prateleiras.webp` (1280x653), `assets/img/sgc-usuarios.webp`
+  (1280x653), `assets/img/livro-capa.webp` (700x1154)
+  (já convertidos no diretório; os existentes `sgc-dashboard.webp` e `sgc-desarquivamentos.webp`
+  foram regerados em 1280x653)
+
+- [ ] **Step 1: `assets/css/site.css` — grid do livro**
+
+Adicionar após o bloco `/* Prints dos sistemas */`:
+
+```css
+/* Livro em destaque */
+.livro { display: grid; gap: 1.5rem; }
+@media (min-width: 760px) {
+  .livro { grid-template-columns: 260px 1fr; align-items: start; }
+  .livro-capa { margin-bottom: 0; }
+}
+```
+
+- [ ] **Step 2: `index.html` — capa na seção do livro**
+
+Substituir:
+
+```html
+  <section class="section section--alt">
+    <div class="wrap">
+      <span class="kicker">Publicação institucional</span>
+      <h2>Do Vestígio à Prova</h2>
+```
+
+por:
+
+```html
+  <section class="section section--alt">
+    <div class="wrap livro">
+      <figure class="print livro-capa">
+        <img src="assets/img/livro-capa.webp" width="700" height="1154" loading="lazy"
+          alt="Capa do livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte">
+      </figure>
+      <div>
+      <span class="kicker">Publicação institucional</span>
+      <h2>Do Vestígio à Prova</h2>
+```
+
+E, no fim da mesma seção, substituir:
+
+```html
+      <div class="actions">
+        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+      </div>
+    </div>
+  </section>
+```
+
+por:
+
+```html
+      <div class="actions">
+        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+      </div>
+      </div>
+    </div>
+  </section>
+```
+
+- [ ] **Step 3: `sgc.html` — funcionalidades detalhadas**
+
+Substituir o bloco de lista atual:
+
+```html
+      <h2>O que o sistema faz</h2>
+      <ul>
+        <li>Gestão de desarquivamentos, anexos, termos e relatórios.</li>
+        <li>Dashboard com estatísticas operacionais.</li>
+        <li>Kanban de tarefas, projetos, checklists e comentários.</li>
+        <li>Gestão de usuários, perfis de acesso e auditoria.</li>
+        <li>Backup, restauração e verificações de saúde da aplicação.</li>
+        <li>Notificações, busca unificada e integrações de apoio.</li>
+      </ul>
+```
+
+por:
+
+```html
+      <h2>O que o sistema faz</h2>
+      <ul>
+        <li><strong>Desarquivamentos</strong> — cadastro, acompanhamento, importação em lote
+        (XLSX/CSV), exportação, emissão de termos em PDF/DOCX, comentários, anexos, lixeira e
+        códigos de barras.</li>
+        <li><strong>Dashboard operacional</strong> — estatísticas em tempo real, gráficos e
+        relatórios mensais em PDF.</li>
+        <li><strong>Tarefas e projetos (Kanban)</strong> — colunas com limite de trabalho em
+        andamento, prioridades, prazos, tags, checklists, subtarefas e comentários.</li>
+        <li><strong>Vestígios e custódia</strong> — catalogação, busca por código SCV e
+        estatísticas.</li>
+        <li><strong>Arquivos e pastas</strong> — upload, download, visualização de imagens e
+        organização com tags.</li>
+        <li><strong>Planilhas de controle</strong> — upload e download das planilhas de
+        desarquivamento.</li>
+        <li><strong>Usuários e perfis</strong> — quatro níveis de acesso, preferências, avatar e
+        bloqueio automático.</li>
+        <li><strong>Notificações</strong> — no sistema, push no navegador e preferências por
+        canal e tipo.</li>
+        <li><strong>Busca unificada</strong> — busca em texto completo em todo o acervo do
+        sistema.</li>
+        <li><strong>Auditoria e backup</strong> — trilha de auditoria das ações e rotina de
+        backup do banco de dados.</li>
+      </ul>
+```
+
+- [ ] **Step 4: `sgc.html` — nova seção de integrações**
+
+Inserir antes de `<h2>Telas do sistema</h2>`:
+
+```html
+      <h2>Integrações e recursos</h2>
+      <ul>
+        <li><strong>SEI</strong> — captura de processos do sistema eletrônico de informações.</li>
+        <li><strong>Escavador SEIRN</strong> — recebimento de publicações por webhook.</li>
+        <li><strong>Metabase</strong> — painéis de business intelligence.</li>
+        <li><strong>OCR</strong> — reconhecimento de texto em documentos digitalizados.</li>
+      </ul>
+```
+
+- [ ] **Step 5: `sgc.html` — seis prints**
+
+Substituir o `grid-2` atual (com 2 figures) por:
+
+```html
+      <div class="grid-2">
+        <figure class="print">
+          <img src="assets/img/sgc-dashboard.webp" width="1280" height="653" loading="lazy"
+            alt="Dashboard do SGC com cartões de indicadores e gráficos de desarquivamentos">
+          <figcaption>Dashboard com estatísticas operacionais</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-desarquivamentos.webp" width="1280" height="653" loading="lazy"
+            alt="Tela de desarquivamentos do SGC com lista de processos e filtros">
+          <figcaption>Gestão de desarquivamentos</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-custodia-etiquetas.webp" width="1280" height="653" loading="lazy"
+            alt="Tela de custódia de vestígios com geração de etiquetas">
+          <figcaption>Custódia de vestígios e etiquetas</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-relatorios.webp" width="1280" height="653" loading="lazy"
+            alt="Tela de relatórios do SGC com filtros e exportação">
+          <figcaption>Relatórios operacionais</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-arquivo-prateleiras.webp" width="1280" height="653" loading="lazy"
+            alt="Tela do arquivo com organização das prateleiras e caixas">
+          <figcaption>Organização do arquivo</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/sgc-usuarios.webp" width="1280" height="653" loading="lazy"
+            alt="Tela de gestão de usuários com perfis de acesso">
+          <figcaption>Usuários e perfis de acesso</figcaption>
+        </figure>
+      </div>
+```
+
+- [ ] **Step 6: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add index.html sgc.html assets/css/site.css assets/img
+git commit -m "feat: capa do livro na home e pagina do SGC detalhada com 6 prints"
+```
+
+---
+
+### Task 14: OJS e DSpace detalhados com mais prints
+
+**Files:**
+- Modify: `ojs.html`, `dspace.html`
+- Add: `assets/img/ojs-logo.webp` (900x149), `assets/img/dspace-comunidade-nugecid.webp`
+  (1280x800), `assets/img/dspace-colecao.webp` (1280x800), `assets/img/dspace-busca.webp`
+  (1280x800)
+
+- [ ] **Step 1: `ojs.html` — logo e escopo da revista**
+
+Substituir:
+
+```html
+      <h2>Sobre a revista</h2>
+      <p>A RPCIRN reúne produção científica nas áreas de criminalística, medicina legal,
+      identificação civil e temas afins da perícia oficial, aproximando o conhecimento técnico
+      produzido no estado da comunidade acadêmica e da sociedade.</p>
+```
+
+por:
+
+```html
+      <h2>Sobre a revista</h2>
+      <figure class="print">
+        <img src="assets/img/ojs-logo.webp" width="900" height="149" loading="lazy"
+          alt="Logotipo da Revista da Polícia Científica do Rio Grande do Norte">
+      </figure>
+      <p>A RPCIRN reúne produção científica nas áreas de criminalística, medicina legal,
+      identificação civil e criminal e temas afins da perícia oficial, aproximando o
+      conhecimento técnico produzido no estado da comunidade acadêmica e da sociedade.</p>
+      <p>O periódico adota o fluxo editorial completo do Open Journal Systems: submissão
+      online, avaliação por pares, editoração e publicação em acesso aberto.</p>
+```
+
+- [ ] **Step 2: `ojs.html` — nova seção "Como submeter"**
+
+Inserir antes de `<h2>Acesso</h2>`:
+
+```html
+      <h2>Como submeter</h2>
+      <ol>
+        <li>Criar cadastro no sistema, como autor.</li>
+        <li>Enviar o manuscrito e preencher os metadados: autoria, resumo e palavras-chave.</li>
+        <li>Acompanhar a avaliação por pares pelo painel do autor.</li>
+        <li>Após aprovação, o artigo entra na edição em preparação.</li>
+      </ol>
+      <!-- CONFIRMAR: diretrizes para autores, secoes e periodicidade com a equipe editorial -->
+```
+
+- [ ] **Step 3: `dspace.html` — o que o repositório reúne, detalhado**
+
+Substituir:
+
+```html
+      <h2>O que o repositório reúne</h2>
+      <ul>
+        <li>Portarias e atos normativos da Polícia Científica do RN.</li>
+        <li>Publicações institucionais, como o livro <em>Do Vestígio à Prova</em>.</li>
+        <li>Documentos e fotografias do acervo de memória institucional.</li>
+        <li>Produção técnica e científica da perícia oficial.</li>
+      </ul>
+```
+
+por:
+
+```html
+      <h2>O que o repositório reúne</h2>
+      <ul>
+        <li>Portarias, leis e demais atos normativos da Polícia Científica do RN.</li>
+        <li>Notas técnicas, relatórios, manuais e procedimentos operacionais.</li>
+        <li>Publicações institucionais, como o livro <em>Do Vestígio à Prova</em>.</li>
+        <li>Documentos e fotografias do acervo de memória institucional.</li>
+        <li>Produção técnica e científica da perícia oficial.</li>
+      </ul>
+      <p>Cada documento recebe metadados padronizados (Dublin Core) e identificador persistente
+      (handle), o que garante busca precisa, citação estável e preservação digital de longo
+      prazo.</p>
+```
+
+- [ ] **Step 4: `dspace.html` — nova seção "Comunidades"**
+
+Inserir antes de `<h2>Como depositar</h2>`:
+
+```html
+      <h2>Comunidades</h2>
+      <p>O acervo é organizado em cinco comunidades, espelhando a estrutura do órgão:</p>
+      <ul>
+        <li><strong>Gestão Estratégica e Administrativa (DG)</strong> — documentos da Direção
+        Geral e da gestão institucional.</li>
+        <li><strong>Instituto de Criminalística (IC)</strong> — procedimentos, guias e relatórios.</li>
+        <li><strong>Instituto de Identificação (II)</strong> — procedimentos e diretrizes.</li>
+        <li><strong>Instituto de Medicina Legal (IML)</strong> — procedimentos, protocolos e notas
+        técnicas.</li>
+        <li><strong>NUGECID</strong> — memória institucional, publicações e acervo do Núcleo.</li>
+      </ul>
+      <p>Dentro das comunidades, as coleções reúnem tipos específicos de documento, como
+      portarias, notas técnicas, relatórios e manuais.</p>
+```
+
+- [ ] **Step 5: `dspace.html` — fluxo de depósito**
+
+Substituir:
+
+```html
+      <h2>Como depositar</h2>
+      <p>Servidores e setores da Polícia Científica do RN podem encaminhar documentos e acervos ao NUGECID para
+      avaliação e depósito no repositório. A equipe do Núcleo orienta sobre formatos, metadados
+      e direitos de publicação.</p>
+```
+
+por:
+
+```html
+      <h2>Como depositar</h2>
+      <ol>
+        <li>O setor encaminha o documento ou acervo ao NUGECID.</li>
+        <li>A equipe avalia o material e define a comunidade e a coleção de destino.</li>
+        <li>Os metadados são descritos conforme o padrão Dublin Core.</li>
+        <li>O documento é depositado e recebe um identificador persistente (handle).</li>
+        <li>O item fica disponível para consulta pública no repositório.</li>
+      </ol>
+```
+
+- [ ] **Step 6: `dspace.html` — seis prints**
+
+Substituir o `grid-2` atual (3 figures) por:
+
+```html
+      <div class="grid-2">
+        <figure class="print">
+          <img src="assets/img/dspace-home.webp" width="1280" height="800" loading="lazy"
+            alt="Página inicial do Repositório Institucional com busca e últimas publicações">
+          <figcaption>Página inicial do repositório</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-comunidades.webp" width="1280" height="800" loading="lazy"
+            alt="Lista das cinco comunidades do repositório institucional">
+          <figcaption>Comunidades do acervo</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-comunidade-nugecid.webp" width="1280" height="800" loading="lazy"
+            alt="Página da comunidade do NUGECID no repositório">
+          <figcaption>Comunidade do NUGECID</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-colecao.webp" width="1280" height="800" loading="lazy"
+            alt="Página de uma coleção do repositório, com a lista de documentos">
+          <figcaption>Coleção de documentos</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-busca.webp" width="1280" height="800" loading="lazy"
+            alt="Resultados de busca no repositório institucional">
+          <figcaption>Busca no acervo</figcaption>
+        </figure>
+        <figure class="print">
+          <img src="assets/img/dspace-item.webp" width="1280" height="800" loading="lazy"
+            alt="Página de um documento no repositório, com metadados e arquivo para download">
+          <figcaption>Página de um documento depositado</figcaption>
+        </figure>
+      </div>
+```
+
+- [ ] **Step 7: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add ojs.html dspace.html assets/img
+git commit -m "feat: paginas do OJS e do DSpace detalhadas com mais prints"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,
