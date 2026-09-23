@@ -79,7 +79,7 @@ a:focus-visible, button:focus-visible {
   padding: 0.45rem 0.6rem; border-radius: var(--radius);
   transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
 }
-.site-nav a[aria-current="page"] { background: var(--kraft); color: var(--ink); }
+.site-nav a[aria-current] { background: var(--kraft); color: var(--ink); }
 
 @media (hover: hover) and (pointer: fine) {
   a:hover { color: var(--ink); }
