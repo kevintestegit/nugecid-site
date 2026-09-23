@@ -144,6 +144,15 @@ a:focus-visible, button:focus-visible {
 .ficha .stamp { align-self: flex-start; }
 .ficha .ficha-link { margin-top: auto; font-weight: 600; }
 
+/* Prints dos sistemas */
+.print { margin: 0 0 1.5rem; }
+.print img { border: 1px solid var(--kraft); border-radius: var(--radius); }
+.print figcaption {
+  margin-top: 0.5rem;
+  font: 400 0.8rem/1.4 "IBM Plex Mono", monospace;
+  color: var(--archive);
+}
+
 /* Carimbo */
 .stamp {
   display: inline-block;
