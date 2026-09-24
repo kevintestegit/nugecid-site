@@ -2383,6 +2383,39 @@ git commit -m "feat: link para visualizar o PDF do livro"
 
 ---
 
+### Task 17: Texto justificado nas seções de prosa
+
+**Files:**
+- Modify: `assets/css/site.css`
+
+- [ ] **Step 1: Regra de justificação**
+
+Após `.prose li { margin-bottom: 0.4rem; }`, adicionar:
+
+```css
+.prose p, .prose li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+```
+
+Vale para todas as seções `.prose` (posts, sobre, SGC, OJS, DSpace). Hero e rodapé ficam
+como estão (alinhados à esquerda). A hifenização usa o `lang="pt-BR"` das páginas.
+
+- [ ] **Step 2: Verificar**
+
+Run: `python3 check.py`
+Expected: `OK: 8 paginas, 0 erro(s)`.
+
+No navegador: parágrafos de `noticia-lancamento-livro.html` com `text-align: justify`,
+sem rolagem horizontal a 360px.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add assets/css/site.css
+git commit -m "style: justifica o texto das secoes de prosa"
+```
+
+---
+
 ## Pendências que não bloqueiam a implementação
 
 Conteúdo provisório marcado com `<!-- CONFIRMAR -->`: contato oficial, datas das notícias,

@@ -173,6 +173,7 @@ a:focus-visible, button:focus-visible {
 /* Prosa */
 .prose ul, .prose ol { padding-left: 1.2rem; max-width: 72ch; }
 .prose li { margin-bottom: 0.4rem; }
+.prose p, .prose li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 
 /* Tabela de stack */
 .table-wrap { overflow-x: auto; }
