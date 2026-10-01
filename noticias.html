@@ -11,54 +11,21 @@
 <meta property="og:url" content="https://kevintestegit.github.io/nugecid-site/noticias.html">
 <meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/noticias.html">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<div class="gov-bar">
-  <div class="wrap">
-    <ul class="gov-shortcuts" aria-label="Atalhos de acessibilidade">
-      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo <span class="key">1</span></a></li>
-      <li><a href="#menu-principal" accesskey="2">Ir para o menu <span class="key">2</span></a></li>
-      <li><a href="#rodape" accesskey="3">Ir para o rodapé <span class="key">3</span></a></li>
-    </ul>
-    <div class="accessibility-controls" aria-label="Controles de acessibilidade">
-      <button class="btn-access" data-action="toggle-contrast" aria-pressed="false" title="Alternar alto contraste">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path></svg>
-        Alto Contraste
-      </button>
-      <button class="btn-access" data-action="font-decrease" title="Diminuir tamanho da fonte">A-</button>
-      <button class="btn-access" data-action="font-reset" title="Restaurar tamanho da fonte">A</button>
-      <button class="btn-access" data-action="font-increase" title="Aumentar tamanho da fonte">A+</button>
-    </div>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="NUGECID - Polícia Científica do Rio Grande do Norte">
-      <span class="brand-insignia" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
-          <path d="M12 8v8"/>
-          <path d="M8 12h8"/>
-        </svg>
-      </span>
-      <span class="brand-text">
-        <span class="brand-mark">PCIRN</span>
-        <span class="brand-name">NUGECID</span>
-      </span>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">PCIRN</span>
+      <span class="brand-name">NUGECID</span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
-    <nav class="site-nav" id="menu-principal" aria-label="Principal">
+    <nav class="site-nav" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="sgc.html">SGC</a>
       <a href="ojs.html">OJS</a>
@@ -69,108 +36,41 @@
   </div>
 </header>
 
-<nav class="breadcrumbs" aria-label="Trilha de navegação">
-  <div class="wrap">
-    <ol class="breadcrumbs-list">
-      <li><a href="index.html">Início</a></li>
-      <li><span aria-current="page">Notícias</span></li>
-    </ol>
-  </div>
-</nav>
-
 <main id="conteudo">
 
   <section class="hero">
     <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">Comunicação e Transparência</span>
-        <h1>Notícias</h1>
-        <p class="lead">Publicações, sistemas e novidades do NUGECID e da Polícia Científica do RN.</p>
-      </div>
+      <h1>Notícias</h1>
+      <p class="lead">Publicações, sistemas e novidades do NUGECID.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      
-      <div class="news-filter-bar reveal">
-        <div class="news-search-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="search" id="news-search" placeholder="Buscar nas notícias..." aria-label="Buscar nas notícias">
-        </div>
-        <div class="filter-pills" role="toolbar" aria-label="Filtrar por categoria">
-          <button class="filter-pill is-active" data-news-filter="all">Todas as notícias</button>
-          <button class="filter-pill" data-news-filter="sistemas">Sistemas</button>
-          <button class="filter-pill" data-news-filter="memoria">Memória Institucional</button>
-        </div>
-      </div>
-
-      <div class="news-status-bar reveal" id="news-count" aria-live="polite">2 notícias encontradas</div>
-
-      <div class="news-list reveal-group">
+      <ul class="news-list">
         <!-- CONFIRMAR: data -->
-        <article class="news-card" data-category="sistemas">
-          <div class="news-card-header">
-            <time datetime="2026">2026</time>
-            <span class="news-badge">Sistemas & Repositório</span>
-          </div>
-          <h3>
-            <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
-          </h3>
-          <p>O NUGECID avança na implantação do repositório institucional em DSpace e da Revista da Polícia Científica do RN em Open Journal Systems.</p>
-        </article>
+        <li>
+          <time datetime="2026">2026</time>
+          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
+        </li>
         <!-- CONFIRMAR: data -->
-        <article class="news-card" data-category="memoria">
-          <div class="news-card-header">
-            <time datetime="2024">2024</time>
-            <span class="news-badge">Memória Institucional</span>
-          </div>
-          <h3>
-            <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
-          </h3>
-          <p>Pesquisa da CPGM resgata a memória institucional da Polícia Científica do RN reunindo marcos legais, personagens e registros históricos.</p>
-        </article>
-      </div>
-
-      <div id="news-empty" style="display: none; padding: 3rem 1rem; text-align: center; color: var(--ink-muted);" class="reveal">
-        <p>Nenhuma publicação encontrada para o filtro selecionado.</p>
-      </div>
-
+        <li>
+          <time datetime="2024">2024</time>
+          <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
+        </li>
+      </ul>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer" id="rodape">
+<footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h4>NUGECID · Polícia Científica do RN</h4>
-        <p>Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória.</p>
-        <p>Órgão vinculado à Diretoria Geral da Polícia Científica do Estado do Rio Grande do Norte (PCIRN).</p>
-      </div>
-      <div class="footer-links">
-        <h4>Sistemas Institucionais</h4>
-        <ul>
-          <li><a href="sgc.html">SGC — Gestão Documental</a></li>
-          <li><a href="ojs.html">OJS — Revista Científica (RPCIRN)</a></li>
-          <li><a href="dspace.html">DSpace — Repositório Institucional</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Institucional & Contato</h4>
-        <ul>
-          <li><a href="sobre.html">Sobre o NUGECID e Comissões</a></li>
-          <li><a href="noticias.html">Notícias e Publicações</a></li>
-          <li><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></li>
-          <li><a href="tel:+558432326928">(84) 3232-6928</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Polícia Científica do Rio Grande do Norte — Lei Complementar nº 795/2025</span>
-      <a href="sobre.html">Sobre e contato</a>
-    </div>
+    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
+    <p>Polícia Científica do Rio Grande do Norte</p>
+    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
+    <a href="tel:+558432326928">(84) 3232-6928</a> ·
+    <a href="sobre.html">Sobre e contato</a></p>
   </div>
 </footer>
 

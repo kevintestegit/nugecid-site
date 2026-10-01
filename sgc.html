@@ -11,54 +11,21 @@
 <meta property="og:url" content="https://kevintestegit.github.io/nugecid-site/sgc.html">
 <meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/sgc.html">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<div class="gov-bar">
-  <div class="wrap">
-    <ul class="gov-shortcuts" aria-label="Atalhos de acessibilidade">
-      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo <span class="key">1</span></a></li>
-      <li><a href="#menu-principal" accesskey="2">Ir para o menu <span class="key">2</span></a></li>
-      <li><a href="#rodape" accesskey="3">Ir para o rodapé <span class="key">3</span></a></li>
-    </ul>
-    <div class="accessibility-controls" aria-label="Controles de acessibilidade">
-      <button class="btn-access" data-action="toggle-contrast" aria-pressed="false" title="Alternar alto contraste">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path></svg>
-        Alto Contraste
-      </button>
-      <button class="btn-access" data-action="font-decrease" title="Diminuir tamanho da fonte">A-</button>
-      <button class="btn-access" data-action="font-reset" title="Restaurar tamanho da fonte">A</button>
-      <button class="btn-access" data-action="font-increase" title="Aumentar tamanho da fonte">A+</button>
-    </div>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="NUGECID - Polícia Científica do Rio Grande do Norte">
-      <span class="brand-insignia" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
-          <path d="M12 8v8"/>
-          <path d="M8 12h8"/>
-        </svg>
-      </span>
-      <span class="brand-text">
-        <span class="brand-mark">PCIRN</span>
-        <span class="brand-name">NUGECID</span>
-      </span>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">PCIRN</span>
+      <span class="brand-name">NUGECID</span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
-    <nav class="site-nav" id="menu-principal" aria-label="Principal">
+    <nav class="site-nav" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="sgc.html" aria-current="page">SGC</a>
       <a href="ojs.html">OJS</a>
@@ -69,36 +36,21 @@
   </div>
 </header>
 
-<nav class="breadcrumbs" aria-label="Trilha de navegação">
-  <div class="wrap">
-    <ol class="breadcrumbs-list">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="index.html#sistemas">Sistemas</a></li>
-      <li><span aria-current="page">SGC</span></li>
-    </ol>
-  </div>
-</nav>
-
 <main id="conteudo">
 
   <section class="hero">
     <div class="wrap">
-      <div class="reveal">
-        <span class="stamp stamp--internal">Uso interno · Rede PCIRN</span>
-        <h1>SGC — Sistema de Gestão de Documentos e Desarquivamentos</h1>
-        <p class="lead">Sistema que organiza os fluxos de desarquivamento, os documentos e os
-        relatórios operacionais da Polícia Científica do Rio Grande do Norte.</p>
-      </div>
+      <span class="stamp">Uso interno</span>
+      <h1>SGC — Sistema de Gestão de Documentos e Desarquivamentos</h1>
+      <p class="lead">Sistema que organiza os fluxos de desarquivamento, os documentos e os
+      relatórios operacionais da Polícia Científica do Rio Grande do Norte.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="wrap prose">
-      <div class="section-header reveal">
-        <h2>O que o sistema faz</h2>
-        <p>Módulos integrados para controle de custódia e processos documentais</p>
-      </div>
-      <ul class="reveal">
+      <h2>O que o sistema faz</h2>
+      <ul>
         <li><strong>Desarquivamentos</strong> — cadastro, acompanhamento, importação em lote
         (XLSX/CSV), exportação, emissão de termos em PDF/DOCX, comentários, anexos, lixeira e
         códigos de barras.</li>
@@ -121,18 +73,15 @@
         <li><strong>Auditoria e backup</strong> — trilha de auditoria das ações e rotina de
         backup do banco de dados.</li>
       </ul>
-      <p class="reveal">O acesso é restrito à rede institucional da PCIRN, por se tratar de sistema
+      <p>O acesso é restrito à rede institucional da PCIRN, por se tratar de sistema
       com dados administrativos e documentais internos.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-header reveal">
-        <h2>Stack técnica</h2>
-        <p>Arquitetura de software robusta, moderna e de alto desempenho</p>
-      </div>
-      <div class="table-wrap reveal">
+      <h2>Stack técnica</h2>
+      <div class="table-wrap">
         <table>
           <caption class="visually-hidden">Tecnologias usadas no SGC</caption>
           <thead>
@@ -153,10 +102,8 @@
 
   <section class="section section--alt">
     <div class="wrap prose">
-      <div class="section-header reveal">
-        <h2>Integrações e recursos</h2>
-      </div>
-      <ul class="reveal">
+      <h2>Integrações e recursos</h2>
+      <ul>
         <li><strong>SEI</strong> — captura de processos do sistema eletrônico de informações.</li>
         <li><strong>Escavador SEIRN</strong> — recebimento de publicações por webhook.</li>
         <li><strong>Metabase</strong> — painéis de business intelligence.</li>
@@ -167,11 +114,8 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="section-header reveal">
-        <h2>Telas do sistema</h2>
-        <p>Clique em qualquer tela para inspecionar em alta resolução no visualizador</p>
-      </div>
-      <div class="grid-2 reveal-group">
+      <h2>Telas do sistema</h2>
+      <div class="grid-2">
         <figure class="print">
           <img src="assets/img/sgc-dashboard.webp" width="1280" height="653" loading="lazy"
             alt="Dashboard do SGC com cartões de indicadores e gráficos de desarquivamentos">
@@ -193,7 +137,7 @@
           <figcaption>Relatórios operacionais</figcaption>
         </figure>
       </div>
-      <div class="actions reveal">
+      <div class="actions">
         <a class="btn btn--ghost" href="index.html#sistemas">Voltar aos sistemas</a>
       </div>
     </div>
@@ -201,36 +145,13 @@
 
 </main>
 
-<footer class="site-footer" id="rodape">
+<footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h4>NUGECID · Polícia Científica do RN</h4>
-        <p>Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória.</p>
-        <p>Órgão vinculado à Diretoria Geral da Polícia Científica do Estado do Rio Grande do Norte (PCIRN).</p>
-      </div>
-      <div class="footer-links">
-        <h4>Sistemas Institucionais</h4>
-        <ul>
-          <li><a href="sgc.html">SGC — Gestão Documental</a></li>
-          <li><a href="ojs.html">OJS — Revista Científica (RPCIRN)</a></li>
-          <li><a href="dspace.html">DSpace — Repositório Institucional</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Institucional & Contato</h4>
-        <ul>
-          <li><a href="sobre.html">Sobre o NUGECID e Comissões</a></li>
-          <li><a href="noticias.html">Notícias e Publicações</a></li>
-          <li><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></li>
-          <li><a href="tel:+558432326928">(84) 3232-6928</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Polícia Científica do Rio Grande do Norte — Lei Complementar nº 795/2025</span>
-      <a href="sobre.html">Sobre e contato</a>
-    </div>
+    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
+    <p>Polícia Científica do Rio Grande do Norte</p>
+    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
+    <a href="tel:+558432326928">(84) 3232-6928</a> ·
+    <a href="sobre.html">Sobre e contato</a></p>
   </div>
 </footer>
 
