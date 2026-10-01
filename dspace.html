@@ -11,21 +11,54 @@
 <meta property="og:url" content="https://kevintestegit.github.io/nugecid-site/dspace.html">
 <meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/dspace.html">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+<div class="gov-bar">
+  <div class="wrap">
+    <ul class="gov-shortcuts" aria-label="Atalhos de acessibilidade">
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo <span class="key">1</span></a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu <span class="key">2</span></a></li>
+      <li><a href="#rodape" accesskey="3">Ir para o rodapé <span class="key">3</span></a></li>
+    </ul>
+    <div class="accessibility-controls" aria-label="Controles de acessibilidade">
+      <button class="btn-access" data-action="toggle-contrast" aria-pressed="false" title="Alternar alto contraste">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path></svg>
+        Alto Contraste
+      </button>
+      <button class="btn-access" data-action="font-decrease" title="Diminuir tamanho da fonte">A-</button>
+      <button class="btn-access" data-action="font-reset" title="Restaurar tamanho da fonte">A</button>
+      <button class="btn-access" data-action="font-increase" title="Aumentar tamanho da fonte">A+</button>
+    </div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">PCIRN</span>
-      <span class="brand-name">NUGECID</span>
+    <a class="brand" href="index.html" aria-label="NUGECID - Polícia Científica do Rio Grande do Norte">
+      <span class="brand-insignia" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+          <path d="M12 8v8"/>
+          <path d="M8 12h8"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-mark">PCIRN</span>
+        <span class="brand-name">NUGECID</span>
+      </span>
     </a>
-    <nav class="site-nav" aria-label="Principal">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <nav class="site-nav" id="menu-principal" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="sgc.html">SGC</a>
       <a href="ojs.html">OJS</a>
@@ -36,33 +69,49 @@
   </div>
 </header>
 
+<nav class="breadcrumbs" aria-label="Trilha de navegação">
+  <div class="wrap">
+    <ol class="breadcrumbs-list">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html#sistemas">Sistemas</a></li>
+      <li><span aria-current="page">Repositório DSpace</span></li>
+    </ol>
+  </div>
+</nav>
+
 <main id="conteudo">
 
   <section class="hero">
     <div class="wrap">
-      <span class="stamp">Em implantação</span>
-      <h1>Repositório Institucional da Polícia Científica do RN</h1>
-      <p class="lead">Memória, documentos e produção científica do Instituto em um acervo
-      digital de acesso aberto, construído em DSpace.</p>
+      <div class="reveal">
+        <span class="stamp stamp--dev">Em implantação</span>
+        <h1>Repositório Institucional da Polícia Científica do RN</h1>
+        <p class="lead">Memória, documentos e produção científica do Instituto em um acervo
+        digital de acesso aberto, construído em DSpace.</p>
+      </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="wrap prose">
-      <h2>O que o repositório reúne</h2>
-      <ul>
+      <div class="section-header reveal">
+        <h2>O que o repositório reúne</h2>
+      </div>
+      <ul class="reveal">
         <li>Portarias, leis e demais atos normativos da Polícia Científica do RN.</li>
         <li>Notas técnicas, relatórios, manuais e procedimentos operacionais.</li>
         <li>Publicações institucionais, como o livro <em>Do Vestígio à Prova</em>.</li>
         <li>Documentos e fotografias do acervo de memória institucional.</li>
         <li>Produção técnica e científica da perícia oficial.</li>
       </ul>
-      <p>Cada documento recebe metadados padronizados (Dublin Core) e identificador persistente
-      (handle), o que garante busca precisa, citação estável e preservação digital de longo
-      prazo.</p>
-      <p>O material é organizado em comunidades e coleções, com metadados padronizados que
-      facilitam a busca e a citação.</p>
-      <div class="grid-2">
+      <div class="reveal">
+        <p>Cada documento recebe metadados padronizados (Dublin Core) e identificador persistente
+        (handle), o que garante busca precisa, citação estável e preservação digital de longo
+        prazo.</p>
+        <p>O material é organizado em comunidades e coleções, com metadados padronizados que
+        facilitam a busca e a citação.</p>
+      </div>
+      <div class="grid-2 reveal-group">
         <figure class="print">
           <img src="assets/img/dspace-home.webp" width="1280" height="800" loading="lazy"
             alt="Página inicial do Repositório Institucional com busca e últimas publicações">
@@ -99,9 +148,11 @@
 
   <section class="section">
     <div class="wrap prose">
-      <h2>Comunidades</h2>
-      <p>O acervo é organizado em cinco comunidades, espelhando a estrutura do órgão:</p>
-      <ul>
+      <div class="section-header reveal">
+        <h2>Comunidades estruturadas</h2>
+      </div>
+      <p class="reveal">O acervo é organizado em cinco comunidades, espelhando a estrutura do órgão:</p>
+      <ul class="reveal">
         <li><strong>Gestão Estratégica e Administrativa (DG)</strong> — documentos da Direção
         Geral e da gestão institucional.</li>
         <li><strong>Instituto de Criminalística (IC)</strong> — procedimentos, guias e relatórios.</li>
@@ -110,36 +161,65 @@
         técnicas.</li>
         <li><strong>NUGECID</strong> — memória institucional, publicações e acervo do Núcleo.</li>
       </ul>
-      <p>Dentro das comunidades, as coleções reúnem tipos específicos de documento, como
+      <p class="reveal">Dentro das comunidades, as coleções reúnem tipos específicos de documento, como
       portarias, notas técnicas, relatórios e manuais.</p>
-      <h2>Como depositar</h2>
-      <ol>
+      
+      <div class="section-header reveal" style="margin-top: 2.5rem;">
+        <h2>Como depositar</h2>
+      </div>
+      <ol class="reveal">
         <li>O setor encaminha o documento ou acervo ao NUGECID.</li>
         <li>A equipe avalia o material e define a comunidade e a coleção de destino.</li>
         <li>Os metadados são descritos conforme o padrão Dublin Core.</li>
         <li>O documento é depositado e recebe um identificador persistente (handle).</li>
         <li>O item fica disponível para consulta pública no repositório.</li>
       </ol>
-      <!-- SLOT DE URL: quando o repositorio estiver publicado, trocar o botao abaixo por
-           <a class="btn" href="https://URL-DO-REPOSITORIO">Acessar repositório</a> -->
-      <p>O repositório está em processo de implantação. O endereço de acesso será publicado
-      aqui assim que o portal entrar no ar.</p>
-      <p><span class="btn" aria-disabled="true">Acessar repositório — em breve</span></p>
-      <div class="actions">
-        <a class="btn btn--ghost" href="index.html#sistemas">Voltar aos sistemas</a>
+      
+      <div class="reveal" style="margin-top: 2rem;">
+        <!-- SLOT DE URL: quando o repositorio estiver publicado, trocar o botao abaixo por
+             <a class="btn" href="https://URL-DO-REPOSITORIO">Acessar repositório</a> -->
+        <p>O repositório está em processo de implantação. O endereço de acesso será publicado
+        aqui assim que o portal entrar no ar.</p>
+        <p><span class="btn is-disabled" aria-disabled="true">Acessar repositório — em breve</span></p>
+        <div class="actions">
+          <a class="btn btn--ghost" href="index.html#sistemas">Voltar aos sistemas</a>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" id="rodape">
   <div class="wrap">
-    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
-    <p>Polícia Científica do Rio Grande do Norte</p>
-    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
-    <a href="tel:+558432326928">(84) 3232-6928</a> ·
-    <a href="sobre.html">Sobre e contato</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>NUGECID · Polícia Científica do RN</h4>
+        <p>Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória.</p>
+        <p>Órgão vinculado à Diretoria Geral da Polícia Científica do Estado do Rio Grande do Norte (PCIRN).</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sistemas Institucionais</h4>
+        <ul>
+          <li><a href="sgc.html">SGC — Gestão Documental</a></li>
+          <li><a href="ojs.html">OJS — Revista Científica (RPCIRN)</a></li>
+          <li><a href="dspace.html">DSpace — Repositório Institucional</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Institucional & Contato</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre o NUGECID e Comissões</a></li>
+          <li><a href="noticias.html">Notícias e Publicações</a></li>
+          <li><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></li>
+          <li><a href="tel:+558432326928">(84) 3232-6928</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Polícia Científica do Rio Grande do Norte — Lei Complementar nº 795/2025</span>
+      <a href="sobre.html">Sobre e contato</a>
+    </div>
   </div>
 </footer>
 

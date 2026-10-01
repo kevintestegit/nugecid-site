@@ -11,21 +11,94 @@
 <meta property="og:url" content="https://kevintestegit.github.io/nugecid-site/">
 <meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "GovernmentOrganization",
+      "@id": "https://kevintestegit.github.io/nugecid-site/#organization",
+      "name": "NUGECID — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória",
+      "alternateName": "Polícia Científica do Rio Grande do Norte",
+      "url": "https://kevintestegit.github.io/nugecid-site/",
+      "email": "arquivogeral@pci.rn.gov.br",
+      "telephone": "+55-84-3232-6928",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Natal",
+        "addressRegion": "RN",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://kevintestegit.github.io/nugecid-site/#livro",
+      "name": "Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte",
+      "isbn": "978-65-01-06618-9",
+      "numberOfPages": 158,
+      "bookVolumeNumber": 1,
+      "datePublished": "2024",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@type": "Organization",
+        "name": "Comissão Permanente de Gestão da Memória (CPGM / PCIRN)"
+      },
+      "publisher": {
+        "@type": "GovernmentOrganization",
+        "name": "Polícia Científica do Rio Grande do Norte — NUGECID"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+<div class="gov-bar">
+  <div class="wrap">
+    <ul class="gov-shortcuts" aria-label="Atalhos de acessibilidade">
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo <span class="key">1</span></a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu <span class="key">2</span></a></li>
+      <li><a href="#rodape" accesskey="3">Ir para o rodapé <span class="key">3</span></a></li>
+    </ul>
+    <div class="accessibility-controls" aria-label="Controles de acessibilidade">
+      <button class="btn-access" data-action="toggle-contrast" aria-pressed="false" title="Alternar alto contraste">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path></svg>
+        Alto Contraste
+      </button>
+      <button class="btn-access" data-action="font-decrease" title="Diminuir tamanho da fonte">A-</button>
+      <button class="btn-access" data-action="font-reset" title="Restaurar tamanho da fonte">A</button>
+      <button class="btn-access" data-action="font-increase" title="Aumentar tamanho da fonte">A+</button>
+    </div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">PCIRN</span>
-      <span class="brand-name">NUGECID</span>
+    <a class="brand" href="index.html" aria-label="NUGECID - Polícia Científica do Rio Grande do Norte">
+      <span class="brand-insignia" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+          <path d="M12 8v8"/>
+          <path d="M8 12h8"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-mark">PCIRN</span>
+        <span class="brand-name">NUGECID</span>
+      </span>
     </a>
-    <nav class="site-nav" aria-label="Principal">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <nav class="site-nav" id="menu-principal" aria-label="Principal">
       <a href="index.html" aria-current="page">Início</a>
       <a href="sgc.html">SGC</a>
       <a href="ojs.html">OJS</a>
@@ -40,38 +113,77 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="kicker">Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</span>
-      <!-- CONFIRMAR: titulo oficial do hero -->
-      <h1>Memória, informação e conhecimento da perícia criminal do Rio Grande do Norte</h1>
-      <p class="lead">O NUGECID cuida do acervo documental, da memória institucional e da produção
-      científica da Polícia Científica do Rio Grande do Norte.</p>
-      <div class="actions">
-        <a class="btn" href="#sistemas">Conhecer os sistemas</a>
-        <a class="btn btn--ghost" href="sobre.html">Sobre o Núcleo</a>
+      <div class="reveal">
+        <span class="kicker">Polícia Científica do Rio Grande do Norte</span>
+        <!-- CONFIRMAR: titulo oficial do hero -->
+        <h1>Memória, informação e conhecimento da perícia criminal do Rio Grande do Norte</h1>
+        <p class="lead">O NUGECID cuida do acervo documental, da memória institucional e da produção
+        científica da Polícia Científica do Rio Grande do Norte.</p>
+        <div class="actions">
+          <a class="btn" href="#sistemas">
+            Conhecer os sistemas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="btn btn--ghost" href="sobre.html">Sobre o Núcleo</a>
+        </div>
+      </div>
+
+      <div class="hero-metrics reveal">
+        <div class="metric-item">
+          <span class="metric-number">3 <span class="accent">sistemas</span></span>
+          <span class="metric-label">Plataformas integradas de gestão, repositório e periódicos</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number">158 <span class="accent">páginas</span></span>
+          <span class="metric-label">Memória histórica resgatada no livro institucional</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number">5 <span class="accent">comunidades</span></span>
+          <span class="metric-label">Estruturadas no repositório digital institucional DSpace</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number">100% <span class="accent">aberto</span></span>
+          <span class="metric-label">Acesso público à produção técnico-científica forense</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="wrap">
-      <h2>O que o Núcleo faz</h2>
-      <div class="grid-2">
-        <div>
+      <div class="section-header reveal">
+        <h2>O que o Núcleo faz</h2>
+        <p>Pilares estratégicos de preservação documental, ciência forense e transparência pública</p>
+      </div>
+      <div class="grid-4 reveal-group">
+        <div class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
           <h3>Gestão documental</h3>
           <p>Coordena o Setor de Arquivo Geral e o Comitê Permanente de Avaliação e Gestão
           Documental, garantindo classificação, avaliação e destinação correta dos documentos.</p>
         </div>
-        <div>
+        <div class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
           <h3>Memória institucional</h3>
           <p>Pesquisa, preserva e dá acesso à história da instituição, com a Comissão Permanente de
           Gestão da Memória e o livro <em>Do Vestígio à Prova</em>.</p>
         </div>
-        <div>
+        <div class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
           <h3>Repositório digital</h3>
           <p>Implanta o repositório institucional em DSpace para reunir portarias, publicações e
           o acervo de memória em um só lugar, com acesso aberto.</p>
         </div>
-        <div>
+        <div class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
           <h3>Periódico científico</h3>
           <p>Mantém a Revista da Polícia Científica do Rio Grande do Norte, publicada em Open
           Journal Systems, com submissão e avaliação por pares.</p>
@@ -82,43 +194,61 @@
 
   <section class="section" id="sistemas">
     <div class="wrap">
-      <h2>Sistemas</h2>
-      <div class="grid-3">
+      <div class="section-header reveal">
+        <h2>Sistemas</h2>
+        <p>Conheça os ecossistemas digitais geridos e em desenvolvimento pelo Núcleo</p>
+      </div>
+      <div class="grid-3 reveal-group">
 
         <article class="ficha">
-          <span class="stamp">Uso interno</span>
-          <h3>SGC</h3>
+          <div class="ficha-header">
+            <h3>SGC</h3>
+            <span class="stamp stamp--internal">Uso interno</span>
+          </div>
           <dl>
             <dt>Nome</dt><dd>Sistema de Gestão de Documentos e Desarquivamentos</dd>
             <dt>Função</dt><dd>Desarquivamentos, anexos, termos e relatórios</dd>
             <dt>Stack</dt><dd>NestJS · React · PostgreSQL · Redis</dd>
             <dt>Situação</dt><dd>Em uso na PCIRN</dd>
           </dl>
-          <a class="ficha-link" href="sgc.html">Ver detalhes</a>
+          <a class="ficha-link" href="sgc.html">
+            Ver detalhes do sistema
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </article>
 
         <article class="ficha">
-          <span class="stamp">Em implantação</span>
-          <h3>OJS · RPCIRN</h3>
+          <div class="ficha-header">
+            <h3>OJS · RPCIRN</h3>
+            <span class="stamp stamp--dev">Em implantação</span>
+          </div>
           <dl>
             <dt>Nome</dt><dd>Revista da Polícia Científica do Rio Grande do Norte</dd>
             <dt>Função</dt><dd>Periódico científico em acesso aberto</dd>
             <dt>Plataforma</dt><dd>Open Journal Systems</dd>
             <dt>Situação</dt><dd>Em implantação</dd>
           </dl>
-          <a class="ficha-link" href="ojs.html">Ver detalhes</a>
+          <a class="ficha-link" href="ojs.html">
+            Ver detalhes da revista
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </article>
 
         <article class="ficha">
-          <span class="stamp">Em implantação</span>
-          <h3>DSpace</h3>
+          <div class="ficha-header">
+            <h3>DSpace</h3>
+            <span class="stamp stamp--dev">Em implantação</span>
+          </div>
           <dl>
             <dt>Nome</dt><dd>Repositório Institucional da Polícia Científica do RN</dd>
             <dt>Função</dt><dd>Portarias, publicações e acervo de memória</dd>
             <dt>Plataforma</dt><dd>DSpace</dd>
             <dt>Situação</dt><dd>Em implantação</dd>
           </dl>
-          <a class="ficha-link" href="dspace.html">Ver detalhes</a>
+          <a class="ficha-link" href="dspace.html">
+            Ver detalhes do repositório
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </article>
 
       </div>
@@ -126,56 +256,126 @@
   </section>
 
   <section class="section section--alt">
-    <div class="wrap livro">
-      <figure class="print livro-capa">
-        <img src="assets/img/livro-capa.webp" width="700" height="1154" loading="lazy"
-          alt="Capa do livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte">
-      </figure>
-      <div>
-      <span class="kicker">Publicação institucional</span>
-      <h2>Do Vestígio à Prova</h2>
-      <p>A trajetória da perícia criminal no Rio Grande do Norte, em pesquisa conduzida pela
-      Comissão Permanente de Gestão da Memória. Volume 1, 2024, ISBN 978-65-01-06618-9.</p>
-      <p>O livro foi publicado em 2024, quando o órgão ainda se chamava Instituto
-      Técnico-Científico de Perícia do Rio Grande do Norte (ITEP-RN), renomeado pela
-      Lei Complementar nº 795, de 8 de outubro de 2025.</p>
-      <div class="actions">
-        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
-        <a class="btn btn--ghost" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
-          target="_blank" rel="noopener">Visualizar PDF
-          <span class="visually-hidden">(abre em nova aba)</span></a>
-      </div>
+    <div class="wrap">
+      <div class="livro-showcase reveal">
+        <div class="livro">
+          <figure class="livro-capa">
+            <img src="assets/img/livro-capa.webp" width="700" height="1154" loading="lazy"
+              alt="Capa do livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte">
+          </figure>
+          <div>
+            <span class="kicker">Publicação institucional</span>
+            <h2>Do Vestígio à Prova</h2>
+            <p>A trajetória da perícia criminal no Rio Grande do Norte, em pesquisa conduzida pela
+            Comissão Permanente de Gestão da Memória. Volume 1, 2024.</p>
+            
+            <div class="livro-meta-tags">
+              <span class="meta-chip">158 páginas</span>
+              <span class="meta-chip">Volume 1 (2024)</span>
+              <button class="meta-chip btn-copy-chip" data-copy="978-65-01-06618-9" title="Clique para copiar o ISBN" aria-label="Copiar ISBN 978-65-01-06618-9">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                ISBN 978-65-01-06618-9
+              </button>
+            </div>
+
+            <p>O livro foi publicado em 2024, quando o órgão ainda se chamava Instituto
+            Técnico-Científico de Perícia do Rio Grande do Norte (ITEP-RN), renomeado pela
+            Lei Complementar nº 795, de 8 de outubro de 2025.</p>
+            
+            <div class="citation-box">
+              <div class="citation-header">
+                <span class="citation-label">Como citar esta obra (ABNT)</span>
+              </div>
+              <div class="citation-text">
+                RIO GRANDE DO NORTE. Polícia Científica. Do Vestígio à Prova: a trajetória da perícia criminal no Rio Grande do Norte. Natal: NUGECID, 2024. v. 1, 158 p. ISBN 978-65-01-06618-9.
+              </div>
+              <div class="citation-actions">
+                <button class="meta-chip btn-copy-chip" data-copy="RIO GRANDE DO NORTE. Polícia Científica. Do Vestígio à Prova: a trajetória da perícia criminal no Rio Grande do Norte. Natal: NUGECID, 2024. v. 1, 158 p. ISBN 978-65-01-06618-9." aria-label="Copiar citação em formato ABNT">
+                  Copiar ABNT
+                </button>
+                <button class="meta-chip btn-copy-chip" data-copy="@book{pcirn2024vestigio, title={Do Vestígio à Prova: a trajetória da perícia criminal no Rio Grande do Norte}, author={{RIO GRANDE DO NORTE. Polícia Científica}}, year={2024}, volume={1}, pages={158}, isbn={978-65-01-06618-9}, publisher={NUGECID}, address={Natal}}" aria-label="Copiar citação em formato BibTeX">
+                  Copiar BibTeX
+                </button>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+              <a class="btn btn--ghost" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
+                target="_blank" rel="noopener">Visualizar PDF
+                <span class="visually-hidden">(abre em nova aba)</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <h2>Últimas notícias</h2>
-      <ul class="news-list">
+      <div class="section-header reveal">
+        <h2>Últimas notícias</h2>
+        <p>Acompanhe atualizações sobre sistemas, publicações e atos normativos</p>
+      </div>
+      <div class="news-list reveal-group">
         <!-- CONFIRMAR: data -->
-        <li>
-          <time datetime="2026">2026</time>
-          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
-        </li>
+        <article class="news-card">
+          <div class="news-card-header">
+            <time datetime="2026">2026</time>
+            <span class="news-badge">Sistemas & Repositório</span>
+          </div>
+          <h3>
+            <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
+          </h3>
+          <p>O NUGECID avança na implantação do repositório institucional em DSpace e da Revista da Polícia Científica do RN em Open Journal Systems.</p>
+        </article>
         <!-- CONFIRMAR: data -->
-        <li>
-          <time datetime="2024">2024</time>
-          <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
-        </li>
-      </ul>
+        <article class="news-card">
+          <div class="news-card-header">
+            <time datetime="2024">2024</time>
+            <span class="news-badge">Memória Institucional</span>
+          </div>
+          <h3>
+            <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
+          </h3>
+          <p>Pesquisa da CPGM resgata a memória institucional da perícia oficial no estado, reunindo documentos e memórias históricas.</p>
+        </article>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" id="rodape">
   <div class="wrap">
-    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
-    <p>Polícia Científica do Rio Grande do Norte</p>
-    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
-    <a href="tel:+558432326928">(84) 3232-6928</a> ·
-    <a href="sobre.html">Sobre e contato</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>NUGECID · Polícia Científica do RN</h4>
+        <p>Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória.</p>
+        <p>Órgão vinculado à Diretoria Geral da Polícia Científica do Estado do Rio Grande do Norte (PCIRN).</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sistemas Institucionais</h4>
+        <ul>
+          <li><a href="sgc.html">SGC — Gestão Documental</a></li>
+          <li><a href="ojs.html">OJS — Revista Científica (RPCIRN)</a></li>
+          <li><a href="dspace.html">DSpace — Repositório Institucional</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Institucional & Contato</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre o NUGECID e Comissões</a></li>
+          <li><a href="noticias.html">Notícias e Publicações</a></li>
+          <li><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></li>
+          <li><a href="tel:+558432326928">(84) 3232-6928</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Polícia Científica do Rio Grande do Norte — Lei Complementar nº 795/2025</span>
+      <a href="sobre.html">Sobre e contato</a>
+    </div>
   </div>
 </footer>
 
