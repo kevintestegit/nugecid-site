@@ -13,69 +13,117 @@
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap">
+  <div class="barra-institucional">
+    <div class="wrap">
+      <p>Polícia Científica do Rio Grande do Norte</p>
+      <p><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> · <a href="tel:+558432326928">(84) 3232-6928</a></p>
+    </div>
+  </div>
+  <div class="wrap site-header__inner">
     <a class="brand" href="index.html">
       <img class="brand-logo" src="assets/img/brasao-pcirn.webp" width="83" height="110" loading="lazy" alt="Brasão da Polícia Científica do RN">
-      <span class="brand-name">NUGECID</span>
+      <span class="brand-text">
+        <span class="brand-name">NUGECID</span>
+        <span class="brand-sub">Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</span>
+      </span>
     </a>
-    <nav class="site-nav" aria-label="Principal">
-      <a href="index.html" aria-current="page">Início</a>
-      <a href="sgc.html">SGC</a>
-      <a href="ojs.html">OJS</a>
-      <a href="dspace.html">DSpace</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="noticias.html">Notícias</a>
-    </nav>
+    <details class="menu">
+      <summary class="menu__toggle"><span class="menu__bars" aria-hidden="true"></span><span>Menu</span></summary>
+      <nav class="menu__lista" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page"><span class="menu__num">01</span>Início</a></li>
+          <li><a href="sgc.html"><span class="menu__num">02</span>SGC</a></li>
+          <li><a href="ojs.html"><span class="menu__num">03</span>OJS · RPCIRN</a></li>
+          <li><a href="dspace.html"><span class="menu__num">04</span>DSpace</a></li>
+          <li><a href="sobre.html"><span class="menu__num">05</span>Sobre</a></li>
+          <li><a href="noticias.html"><span class="menu__num">06</span>Notícias</a></li>
+        </ul>
+      </nav>
+    </details>
   </div>
 </header>
 
 <main id="conteudo">
 
   <section class="hero">
-    <div class="wrap">
-      <span class="kicker">Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</span>
-      <!-- CONFIRMAR: titulo oficial do hero -->
-      <h1>Memória, informação e conhecimento da perícia criminal do Rio Grande do Norte</h1>
-      <p class="lead">O NUGECID cuida do acervo documental, da memória institucional e da produção
-      científica da Polícia Científica do Rio Grande do Norte.</p>
-      <div class="actions">
-        <a class="btn" href="#sistemas">Conhecer os sistemas</a>
-        <a class="btn btn--ghost" href="sobre.html">Sobre o Núcleo</a>
+    <div class="wrap hero__grid">
+      <div>
+        <span class="kicker">Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</span>
+        <!-- CONFIRMAR: titulo oficial do hero -->
+        <h1>Memória, informação e conhecimento da perícia criminal do Rio Grande do Norte</h1>
+        <p class="lead">O NUGECID cuida do acervo documental, da memória institucional e da produção
+        científica da Polícia Científica do Rio Grande do Norte.</p>
+        <div class="actions">
+          <a class="btn" href="#sistemas">Conhecer os sistemas</a>
+          <a class="btn btn--ghost" href="sobre.html">Sobre o Núcleo</a>
+        </div>
+        <div class="hero__meta">
+          <span class="stamp">Acesso aberto</span>
+          <span class="tag">Portaria nº 127 · 2023</span>
+        </div>
       </div>
+      <figure class="plate">
+        <img src="assets/img/hero-pericia.webp" width="569" height="274" loading="lazy"
+          alt="Gravura em estilo blueprint de um perito com câmera sobre tripé em frente ao rio Potengi, à ponte e ao morro de Natal, placas de prova numeradas e a sede da Polícia Científica">
+        <figcaption><b>Placa I</b> — Perícia de campo em Natal: placas de prova numeradas, rio Potengi e sede da Polícia Científica.</figcaption>
+      </figure>
     </div>
   </section>
+
+  <img class="divider" src="assets/img/separador-h.webp" width="298" height="82" loading="lazy" alt="">
 
   <section class="section section--alt">
     <div class="wrap">
       <h2>O que o Núcleo faz</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Gestão documental</h3>
+      <div class="grid-4">
+
+        <article class="ficha">
+          <div class="ficha__topo">
+            <h3>Gestão documental</h3>
+            <img class="ficha__icone" src="assets/img/icones/gestao-documental.webp" width="51" height="56" loading="lazy" alt="">
+          </div>
           <p>Coordena o Setor de Arquivo Geral e o Comitê Permanente de Avaliação e Gestão
           Documental, garantindo classificação, avaliação e destinação correta dos documentos.</p>
-        </div>
-        <div>
-          <h3>Memória institucional</h3>
+          <p class="ficha__rodape"><span class="tag">SAG · CPAGED</span></p>
+        </article>
+
+        <article class="ficha">
+          <div class="ficha__topo">
+            <h3>Memória institucional</h3>
+            <img class="ficha__icone" src="assets/img/icones/memoria-institucional.webp" width="59" height="46" loading="lazy" alt="">
+          </div>
           <p>Pesquisa, preserva e dá acesso à história da instituição, com a Comissão Permanente de
           Gestão da Memória e o livro <em>Do Vestígio à Prova</em>.</p>
-        </div>
-        <div>
-          <h3>Repositório digital</h3>
+          <p class="ficha__rodape"><span class="tag">CPGM · 2024</span></p>
+        </article>
+
+        <article class="ficha">
+          <div class="ficha__topo">
+            <h3>Repositório digital</h3>
+            <img class="ficha__icone" src="assets/img/icones/repositorio-digital.webp" width="48" height="56" loading="lazy" alt="">
+          </div>
           <p>Implanta o repositório institucional em DSpace para reunir portarias, publicações e
           o acervo de memória em um só lugar, com acesso aberto.</p>
-        </div>
-        <div>
-          <h3>Periódico científico</h3>
+          <p class="ficha__rodape"><span class="tag">DSpace · Em implantação</span></p>
+        </article>
+
+        <article class="ficha">
+          <div class="ficha__topo">
+            <h3>Periódico científico</h3>
+            <img class="ficha__icone" src="assets/img/icones/periodico-cientifico.webp" width="49" height="56" loading="lazy" alt="">
+          </div>
           <p>Mantém a Revista da Polícia Científica do Rio Grande do Norte, publicada em Open
           Journal Systems, com submissão e avaliação por pares.</p>
-        </div>
+          <p class="ficha__rodape"><span class="tag">OJS · Em implantação</span></p>
+        </article>
+
       </div>
     </div>
   </section>
@@ -86,7 +134,10 @@
       <div class="grid-3">
 
         <article class="ficha">
-          <span class="stamp">Uso interno</span>
+          <div class="ficha__topo">
+            <img class="ficha__icone" src="assets/img/icones/gestao-documental.webp" width="51" height="56" loading="lazy" alt="">
+            <span class="stamp">Uso interno</span>
+          </div>
           <h3>SGC</h3>
           <dl>
             <dt>Nome</dt><dd>Sistema de Gestão de Documentos e Desarquivamentos</dd>
@@ -94,11 +145,14 @@
             <dt>Stack</dt><dd>NestJS · React · PostgreSQL · Redis</dd>
             <dt>Situação</dt><dd>Em uso na PCIRN</dd>
           </dl>
-          <a class="ficha-link" href="sgc.html">Ver detalhes</a>
+          <p class="ficha__rodape"><a class="ficha-link" href="sgc.html">Ver detalhes</a></p>
         </article>
 
         <article class="ficha">
-          <span class="stamp">Em implantação</span>
+          <div class="ficha__topo">
+            <img class="ficha__icone" src="assets/img/icones/periodico-cientifico.webp" width="49" height="56" loading="lazy" alt="">
+            <span class="stamp">Em implantação</span>
+          </div>
           <h3>OJS · RPCIRN</h3>
           <dl>
             <dt>Nome</dt><dd>Revista da Polícia Científica do Rio Grande do Norte</dd>
@@ -106,11 +160,14 @@
             <dt>Plataforma</dt><dd>Open Journal Systems</dd>
             <dt>Situação</dt><dd>Em implantação</dd>
           </dl>
-          <a class="ficha-link" href="ojs.html">Ver detalhes</a>
+          <p class="ficha__rodape"><a class="ficha-link" href="ojs.html">Ver detalhes</a></p>
         </article>
 
         <article class="ficha">
-          <span class="stamp">Em implantação</span>
+          <div class="ficha__topo">
+            <img class="ficha__icone" src="assets/img/icones/repositorio-digital.webp" width="48" height="56" loading="lazy" alt="">
+            <span class="stamp">Em implantação</span>
+          </div>
           <h3>DSpace</h3>
           <dl>
             <dt>Nome</dt><dd>Repositório Institucional da Polícia Científica do RN</dd>
@@ -118,64 +175,118 @@
             <dt>Plataforma</dt><dd>DSpace</dd>
             <dt>Situação</dt><dd>Em implantação</dd>
           </dl>
-          <a class="ficha-link" href="dspace.html">Ver detalhes</a>
+          <p class="ficha__rodape"><a class="ficha-link" href="dspace.html">Ver detalhes</a></p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section class="section section--alt">
-    <div class="wrap livro">
-      <figure class="print livro-capa">
-        <img src="assets/img/livro-capa.webp" width="700" height="1154" loading="lazy"
-          alt="Capa do livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte">
-      </figure>
-      <div>
-      <span class="kicker">Publicação institucional</span>
-      <h2>Do Vestígio à Prova</h2>
-      <p>A trajetória da perícia criminal no Rio Grande do Norte, em pesquisa conduzida pela
-      Comissão Permanente de Gestão da Memória. Volume 1, 2024, ISBN 978-65-01-06618-9.</p>
-      <p>O livro foi publicado em 2024, quando o órgão ainda se chamava Instituto
-      Técnico-Científico de Perícia do Rio Grande do Norte (ITEP-RN), renomeado pela
-      Lei Complementar nº 795, de 8 de outubro de 2025.</p>
-      <div class="actions">
-        <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
-        <a class="btn btn--ghost" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
-          target="_blank" rel="noopener">Visualizar PDF
-          <span class="visually-hidden">(abre em nova aba)</span></a>
+  <section class="section section--paper">
+    <div class="wrap split split--wide">
+      <div class="split__aside">
+        <figure class="plate plate--retrato">
+          <img src="assets/img/livro-capa.webp" width="700" height="1154" loading="lazy"
+            alt="Capa do livro Do Vestígio à Prova: A Trajetória da Perícia Criminal no Rio Grande do Norte">
+          <figcaption><b>Volume 1</b> · 2024 · ISBN 978-65-01-06618-9</figcaption>
+        </figure>
       </div>
+      <div>
+        <span class="kicker">Publicação institucional</span>
+        <h2>Do Vestígio à Prova</h2>
+        <p>A trajetória da perícia criminal no Rio Grande do Norte, em pesquisa conduzida pela
+        Comissão Permanente de Gestão da Memória. Volume 1, 2024, ISBN 978-65-01-06618-9.</p>
+        <p>O livro foi publicado em 2024, quando o órgão ainda se chamava Instituto
+        Técnico-Científico de Perícia do Rio Grande do Norte (ITEP-RN), renomeado pela
+        Lei Complementar nº 795, de 8 de outubro de 2025.</p>
+        <div class="actions">
+          <a class="btn" href="noticia-lancamento-livro.html">Sobre a publicação</a>
+          <a class="btn btn--ghost" href="https://drive.google.com/file/d/1_Sdru5ukTgvIwmae3blHcrNwCr5tB6G5/view"
+            target="_blank" rel="noopener">Visualizar PDF
+            <span class="visually-hidden">(abre em nova aba)</span></a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="wrap">
-      <h2>Últimas notícias</h2>
-      <ul class="news-list">
-        <!-- CONFIRMAR: data -->
-        <li>
-          <time datetime="2026">2026</time>
-          <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
-        </li>
-        <!-- CONFIRMAR: data -->
-        <li>
-          <time datetime="2024">2024</time>
-          <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
-        </li>
-      </ul>
+    <div class="wrap split split--sticky">
+      <div>
+        <h2>Últimas notícias</h2>
+        <ul class="news-list">
+          <!-- CONFIRMAR: data -->
+          <li>
+            <time datetime="2026">2026</time>
+            <div>
+              <a href="noticia-sistemas-implantacao.html">NUGECID implanta repositório digital e periódico científico</a>
+              <p class="news-list__resumo">Avanço da implantação do repositório institucional em DSpace
+              e da Revista da Polícia Científica do RN em Open Journal Systems.</p>
+            </div>
+          </li>
+          <!-- CONFIRMAR: data -->
+          <li>
+            <time datetime="2024">2024</time>
+            <div>
+              <a href="noticia-lancamento-livro.html">Polícia Científica do RN lança livro sobre a trajetória da perícia criminal</a>
+              <p class="news-list__resumo">Pesquisa da Comissão Permanente de Gestão da Memória
+              resgata marcos legais, personagens e inovações da perícia oficial no estado.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn--ghost btn--sm" href="noticias.html">Todas as notícias</a>
+        </div>
+      </div>
+      <aside class="split__aside">
+        <figure class="plate">
+          <img src="assets/img/ilustracao-evidencias.webp" width="125" height="74" loading="lazy"
+            alt="Gravura de placas de prova numeradas 1, 2 e 3 sobre o solo">
+          <figcaption><b>Registro</b> — Cada documento recebe identificador, metadado e destinação.</figcaption>
+        </figure>
+      </aside>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
-    <p>Polícia Científica do Rio Grande do Norte</p>
-    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
-    <a href="tel:+558432326928">(84) 3232-6928</a> ·
-    <a href="sobre.html">Sobre e contato</a></p>
+  <div class="footer__paisagem">
+    <img src="assets/img/footer-paisagem.webp" width="511" height="82" loading="lazy" alt=""
+      role="presentation">
+  </div>
+  <div class="wrap footer__grid">
+    <div>
+      <div class="footer__brand">
+        <img src="assets/img/brasao-pcirn.webp" width="83" height="110" loading="lazy" alt="Brasão da Polícia Científica do RN">
+        <span class="footer__brand-name">NUGECID</span>
+      </div>
+      <p class="footer__brand-sub">Núcleo de Gestão do Conhecimento, Informação, Documentação e
+      Memória da Polícia Científica do Rio Grande do Norte.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sgc.html">SGC</a></li>
+        <li><a href="ojs.html">OJS · RPCIRN</a></li>
+        <li><a href="dspace.html">DSpace</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <p><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></p>
+      <p><a href="tel:+558432326928">(84) 3232-6928</a></p>
+      <p><a href="sobre.html#contato">Endereço e horário</a></p>
+      <p>Setor de Arquivo Geral · ITEP-RN / PCIRN</p>
+    </div>
+  </div>
+  <div class="footer__base">
+    <div class="wrap">
+      <p>Polícia Científica do Rio Grande do Norte</p>
+      <p>Conteúdo sob acesso aberto · Site sem cookies de rastreamento</p>
+    </div>
   </div>
 </footer>
 

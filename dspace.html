@@ -13,34 +13,55 @@
 <link rel="canonical" href="https://kevintestegit.github.io/nugecid-site/dspace.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap">
+  <div class="barra-institucional">
+    <div class="wrap">
+      <p>Polícia Científica do Rio Grande do Norte</p>
+      <p><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> · <a href="tel:+558432326928">(84) 3232-6928</a></p>
+    </div>
+  </div>
+  <div class="wrap site-header__inner">
     <a class="brand" href="index.html">
       <img class="brand-logo" src="assets/img/brasao-pcirn.webp" width="83" height="110" loading="lazy" alt="Brasão da Polícia Científica do RN">
-      <span class="brand-name">NUGECID</span>
+      <span class="brand-text">
+        <span class="brand-name">NUGECID</span>
+        <span class="brand-sub">Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</span>
+      </span>
     </a>
-    <nav class="site-nav" aria-label="Principal">
-      <a href="index.html">Início</a>
-      <a href="sgc.html">SGC</a>
-      <a href="ojs.html">OJS</a>
-      <a href="dspace.html" aria-current="page">DSpace</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="noticias.html">Notícias</a>
-    </nav>
+    <details class="menu">
+      <summary class="menu__toggle"><span class="menu__bars" aria-hidden="true"></span><span>Menu</span></summary>
+      <nav class="menu__lista" aria-label="Principal">
+        <ul>
+          <li><a href="index.html"><span class="menu__num">01</span>Início</a></li>
+          <li><a href="sgc.html"><span class="menu__num">02</span>SGC</a></li>
+          <li><a href="ojs.html"><span class="menu__num">03</span>OJS · RPCIRN</a></li>
+          <li><a href="dspace.html" aria-current="page"><span class="menu__num">04</span>DSpace</a></li>
+          <li><a href="sobre.html"><span class="menu__num">05</span>Sobre</a></li>
+          <li><a href="noticias.html"><span class="menu__num">06</span>Notícias</a></li>
+        </ul>
+      </nav>
+    </details>
   </div>
 </header>
 
 <main id="conteudo">
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="stamp">Em implantação</span>
+  <section class="pagehead">
+    <div class="pagehead__banner">
+      <img src="assets/img/banner-dspace.webp" width="344" height="178" loading="lazy"
+        alt="Gravura de um notebook com página de documento, lupa, impressão digital e estantes de acervo, sobre a planta do Rio Grande do Norte">
+    </div>
+    <div class="wrap pagehead__body">
+      <div class="pagehead__meta">
+        <span class="stamp">Em implantação</span>
+        <span class="tag">Acesso aberto</span>
+      </div>
       <h1>Repositório Institucional da Polícia Científica do RN</h1>
       <p class="lead">Memória, documentos e produção científica do Instituto em um acervo
       digital de acesso aberto, construído em DSpace.</p>
@@ -48,21 +69,145 @@
   </section>
 
   <section class="section section--alt">
-    <div class="wrap prose">
-      <h2>O que o repositório reúne</h2>
-      <ul>
-        <li>Portarias, leis e demais atos normativos da Polícia Científica do RN.</li>
-        <li>Notas técnicas, relatórios, manuais e procedimentos operacionais.</li>
-        <li>Publicações institucionais, como o livro <em>Do Vestígio à Prova</em>.</li>
-        <li>Documentos e fotografias do acervo de memória institucional.</li>
-        <li>Produção técnica e científica da perícia oficial.</li>
-      </ul>
-      <p>Cada documento recebe metadados padronizados (Dublin Core) e identificador persistente
-      (handle), o que garante busca precisa, citação estável e preservação digital de longo
-      prazo.</p>
-      <p>O material é organizado em comunidades e coleções, com metadados padronizados que
-      facilitam a busca e a citação.</p>
-      <div class="grid-2">
+    <div class="wrap split split--sticky">
+      <div>
+        <h2>O que o repositório reúne</h2>
+        <ul class="keylist">
+          <li>
+            <img src="assets/img/icones/normas-portarias.webp" width="51" height="50" loading="lazy" alt="">
+            <div>
+              <b>Atos normativos</b>
+              <p>Portarias, leis e demais atos normativos da Polícia Científica do RN.</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/img/icones/politicas.webp" width="38" height="48" loading="lazy" alt="">
+            <div>
+              <b>Documentos técnicos</b>
+              <p>Notas técnicas, relatórios, manuais e procedimentos operacionais.</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/img/icones/periodico-cientifico.webp" width="49" height="56" loading="lazy" alt="">
+            <div>
+              <b>Publicações institucionais</b>
+              <p>Publicações institucionais, como o livro <em>Do Vestígio à Prova</em>.</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/img/icones/memoria-institucional.webp" width="59" height="46" loading="lazy" alt="">
+            <div>
+              <b>Memória institucional</b>
+              <p>Documentos e fotografias do acervo de memória institucional.</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/img/icones/repositorio-digital.webp" width="48" height="56" loading="lazy" alt="">
+            <div>
+              <b>Produção científica</b>
+              <p>Produção técnica e científica da perícia oficial.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="prose mt-l">
+          <p>Cada documento recebe metadados padronizados (Dublin Core) e identificador persistente
+          (handle), o que garante busca precisa, citação estável e preservação digital de longo
+          prazo.</p>
+          <p>O material é organizado em comunidades e coleções, com metadados padronizados que
+          facilitam a busca e a citação.</p>
+        </div>
+      </div>
+      <aside class="split__aside">
+        <article class="ficha">
+          <div class="ficha__topo">
+            <h3>Ficha do acervo</h3>
+            <img class="ficha__icone" src="assets/img/icones/colecoes.webp" width="58" height="46" loading="lazy" alt="">
+          </div>
+          <dl>
+            <dt>Plataforma</dt><dd>DSpace</dd>
+            <dt>Metadados</dt><dd>Dublin Core</dd>
+            <dt>Identificador</dt><dd>Handle persistente</dd>
+            <dt>Organização</dt><dd>Comunidades e coleções</dd>
+            <dt>Situação</dt><dd>Em implantação</dd>
+          </dl>
+        </article>
+        <figure class="plate">
+          <img src="assets/img/ilustracao-mapa.webp" width="145" height="94" loading="lazy"
+            alt="Gravura da planta do estado do Rio Grande do Norte">
+          <figcaption><b>Território</b> — Um único acervo para as unidades do estado.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>Comunidades</h2>
+        <p>O acervo é organizado em cinco comunidades, espelhando a estrutura do órgão:</p>
+        <ul class="keylist keylist--simples">
+          <li><div><b>Gestão Estratégica e Administrativa (DG)</b>
+            <p>Documentos da Direção Geral e da gestão institucional.</p></div></li>
+          <li><div><b>Instituto de Criminalística (IC)</b>
+            <p>Procedimentos, guias e relatórios.</p></div></li>
+          <li><div><b>Instituto de Identificação (II)</b>
+            <p>Procedimentos e diretrizes.</p></div></li>
+          <li><div><b>Instituto de Medicina Legal (IML)</b>
+            <p>Procedimentos, protocolos e notas técnicas.</p></div></li>
+          <li><div><b>NUGECID</b>
+            <p>Memória institucional, publicações e acervo do Núcleo.</p></div></li>
+        </ul>
+        <p class="mt-l">Dentro das comunidades, as coleções reúnem tipos específicos de
+        documento, como portarias, notas técnicas, relatórios e manuais.</p>
+      </div>
+      <aside class="split__aside">
+        <figure class="plate">
+          <img src="assets/img/ilustracao-evidencias.webp" width="125" height="74" loading="lazy"
+            alt="Gravura de placas de prova numeradas 1, 2 e 3 sobre o solo">
+          <figcaption><b>Rastreio</b> — Cada item depositado recebe um handle único e permanente.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap split">
+      <div>
+        <h2>Como depositar</h2>
+        <ol class="steps">
+          <li>O setor encaminha o documento ou acervo ao NUGECID.</li>
+          <li>A equipe avalia o material e define a comunidade e a coleção de destino.</li>
+          <li>Os metadados são descritos conforme o padrão Dublin Core.</li>
+          <li>O documento é depositado e recebe um identificador persistente (handle).</li>
+          <li>O item fica disponível para consulta pública no repositório.</li>
+        </ol>
+        <!-- SLOT DE URL: quando o repositorio estiver publicado, trocar o botao abaixo por
+             <a class="btn" href="https://URL-DO-REPOSITORIO">Acessar repositório</a> -->
+        <div class="notice">
+          <p><span class="stamp stamp--plain">Em breve</span></p>
+          <p>O repositório está em processo de implantação. O endereço de acesso será publicado
+          aqui assim que o portal entrar no ar.</p>
+          <p class="actions"><span class="btn" aria-disabled="true">Acessar repositório — em breve</span></p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--ghost" href="index.html#sistemas">Voltar aos sistemas</a>
+          <a class="btn btn--ghost" href="ojs.html">Ver a revista</a>
+        </div>
+      </div>
+      <aside class="split__aside">
+        <figure class="plate">
+          <img src="assets/img/ilustracao-documentos.webp" width="147" height="96" loading="lazy"
+            alt="Gravura de uma pilha de livros e documentos empilhados">
+          <figcaption><b>Acervo</b> — Portarias, notas técnicas, relatórios e manuais.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <h2>Telas do repositório</h2>
+      <div class="grid-3">
         <figure class="print">
           <img src="assets/img/dspace-home.webp" width="1280" height="800" loading="lazy"
             alt="Página inicial do Repositório Institucional com busca e últimas publicações">
@@ -97,49 +242,46 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap prose">
-      <h2>Comunidades</h2>
-      <p>O acervo é organizado em cinco comunidades, espelhando a estrutura do órgão:</p>
-      <ul>
-        <li><strong>Gestão Estratégica e Administrativa (DG)</strong> — documentos da Direção
-        Geral e da gestão institucional.</li>
-        <li><strong>Instituto de Criminalística (IC)</strong> — procedimentos, guias e relatórios.</li>
-        <li><strong>Instituto de Identificação (II)</strong> — procedimentos e diretrizes.</li>
-        <li><strong>Instituto de Medicina Legal (IML)</strong> — procedimentos, protocolos e notas
-        técnicas.</li>
-        <li><strong>NUGECID</strong> — memória institucional, publicações e acervo do Núcleo.</li>
-      </ul>
-      <p>Dentro das comunidades, as coleções reúnem tipos específicos de documento, como
-      portarias, notas técnicas, relatórios e manuais.</p>
-      <h2>Como depositar</h2>
-      <ol>
-        <li>O setor encaminha o documento ou acervo ao NUGECID.</li>
-        <li>A equipe avalia o material e define a comunidade e a coleção de destino.</li>
-        <li>Os metadados são descritos conforme o padrão Dublin Core.</li>
-        <li>O documento é depositado e recebe um identificador persistente (handle).</li>
-        <li>O item fica disponível para consulta pública no repositório.</li>
-      </ol>
-      <!-- SLOT DE URL: quando o repositorio estiver publicado, trocar o botao abaixo por
-           <a class="btn" href="https://URL-DO-REPOSITORIO">Acessar repositório</a> -->
-      <p>O repositório está em processo de implantação. O endereço de acesso será publicado
-      aqui assim que o portal entrar no ar.</p>
-      <p><span class="btn" aria-disabled="true">Acessar repositório — em breve</span></p>
-      <div class="actions">
-        <a class="btn btn--ghost" href="index.html#sistemas">Voltar aos sistemas</a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <p><strong>NUGECID</strong> — Núcleo de Gestão do Conhecimento, Informação, Documentação e Memória</p>
-    <p>Polícia Científica do Rio Grande do Norte</p>
-    <p>Contato: <a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a> ·
-    <a href="tel:+558432326928">(84) 3232-6928</a> ·
-    <a href="sobre.html">Sobre e contato</a></p>
+  <div class="footer__paisagem">
+    <img src="assets/img/footer-paisagem.webp" width="511" height="82" loading="lazy" alt=""
+      role="presentation">
+  </div>
+  <div class="wrap footer__grid">
+    <div>
+      <div class="footer__brand">
+        <img src="assets/img/brasao-pcirn.webp" width="83" height="110" loading="lazy" alt="Brasão da Polícia Científica do RN">
+        <span class="footer__brand-name">NUGECID</span>
+      </div>
+      <p class="footer__brand-sub">Núcleo de Gestão do Conhecimento, Informação, Documentação e
+      Memória da Polícia Científica do Rio Grande do Norte.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sgc.html">SGC</a></li>
+        <li><a href="ojs.html">OJS · RPCIRN</a></li>
+        <li><a href="dspace.html">DSpace</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <p><a href="mailto:arquivogeral@pci.rn.gov.br">arquivogeral@pci.rn.gov.br</a></p>
+      <p><a href="tel:+558432326928">(84) 3232-6928</a></p>
+      <p><a href="sobre.html#contato">Endereço e horário</a></p>
+      <p>Setor de Arquivo Geral · ITEP-RN / PCIRN</p>
+    </div>
+  </div>
+  <div class="footer__base">
+    <div class="wrap">
+      <p>Polícia Científica do Rio Grande do Norte</p>
+      <p>Conteúdo sob acesso aberto · Site sem cookies de rastreamento</p>
+    </div>
   </div>
 </footer>
 
