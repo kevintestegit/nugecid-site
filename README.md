@@ -13,13 +13,19 @@ Publicado em: https://kevintestegit.github.io/nugecid-site/
   layout → componentes).
 - `assets/img/` — brasão oficial, prints reais dos sistemas e as gravuras/ícones do mockup.
 - `check.py` — verificação de links internos, metadados e imagens.
+- `sistemas.html` — visão geral das plataformas e seus estados de implantação.
+- `assets/fonts/` — fontes locais e respectivas licenças SIL OFL.
+- `DESIGN.md` — identidade visual e mapeamento para os tokens do CSS.
+- `tests/` — regressões de conteúdo, links e validação no navegador.
 - `docs/superpowers/` — spec e plano de implementação.
 
 ## Design system
 
-Identidade editorial: arquivo científico, perícia criminal e memória documental. Marfim e
-azul-marinho, gravuras em estilo blueprint, bordas finas e muito respiro. Sem gradientes,
-glassmorphism nem estética de dashboard SaaS.
+Identidade editorial: arquivo científico, perícia criminal e memória documental. O mockup
+fornecido em 08/10/2026 orienta o papel marfim, os títulos serifados, os cartões de borda
+fina e a faixa azul profunda. A imagem de ambientação combina registros abertos,
+pastas e livros em luz quente; máscaras de composição preservam a leitura dos textos.
+Sem glassmorphism ou estética de dashboard SaaS.
 
 Tokens ficam no `:root` do `site.css`:
 
@@ -40,12 +46,17 @@ Componentes compartilhados: `barra-institucional`, `menu` (desktop inline / mobi
 com legenda), `btn`, `ficha`, `keylist`, `steps`, `data-table`, `news-list`, `notice`,
 `divider`, `site-footer`.
 
-Todas as combinações de cor passam em WCAG AA (mínimo 5,5:1 para texto corrido). Foco visível
-com contorno de 2px, claro no azul-marinho e carimbo no papel.
+Foco visível com contorno de 2px, claro no azul-marinho e escuro no cabeçalho de papel.
+A auditoria automática WCAG A/AA das nove páginas em desktop e mobile não encontrou
+violações; isso não substitui uma avaliação manual completa de acessibilidade.
 
 ## Assets visuais
 
-As gravuras vêm de `NU_GECID_assets_mockup.zip`. Os arquivos entregues eram folhas de contato
+`arquivo-editorial.webp` é uma ilustração gerada de ambientação editorial, inspirada
+no mockup; não é fotografia do acervo da instituição. A capa verdadeira em
+`livro-capa.webp` e o brasão oficial foram preservados sem alteração.
+
+As gravuras já existentes vêm de `NU_GECID_assets_mockup.zip`. Os arquivos entregues eram folhas de contato
 com fundo opaco e vários elementos por imagem, então foram fatiados e convertidos para WebP
 (alpha nas bordas, 3× com alpha suavizado nos ícones de ~30px):
 
@@ -67,10 +78,25 @@ Textos dentro das imagens são só linguagem visual; todo o conteúdo real está
 
 ```bash
 python3 check.py
+python3 -m unittest discover -s tests -v
 ```
 
 Exit code 0 = tudo certo. Verifica: links internos existem, cada página tem `lang="pt-BR"`,
 `<title>`, um `<h1>` e `meta description`, e toda `<img>` tem `alt` e `loading="lazy"`.
+
+Para servir localmente: `python3 -m http.server 8000` na raiz do repositório.
+O site não precisa de build, Node ou instalação de dependências.
+
+Para reproduzir as capturas e as verificações de navegador, com Playwright e Chromium instalados:
+
+```bash
+python3 tests/browser_smoke.py --output /tmp/nugecid-review
+```
+
+O teste verifica nove páginas em cinco larguras, imagens, fontes, navegação por teclado,
+disclosures e ausência de rolagem horizontal. Para incluir axe-core, passe `--axe`
+com o caminho do script de auditoria; sem essa opção, a auditoria axe não é executada.
+Veja `docs/visual-review.md` para a comparação com o mockup e os resultados.
 
 ## Publicação
 
