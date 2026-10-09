@@ -35,15 +35,16 @@ Tokens ficam no `:root` do `site.css`:
 | `--rule` / `--rule-2` | Fios e divisores |
 | `--ink` / `--ink-2` | Texto corrido e texto secundário |
 | `--navy` / `--navy-2` / `--on-navy` | Cabeçalho, rodapé, links |
+| `--gold` / `--gold-2` / `--gold-3` | Botão principal, destaques e item ativo |
 | `--stamp` / `--green` | Carimbo de status |
-| `--serif` / `--sans` / `--mono` | Newsreader (títulos) · Archivo (interface) · IBM Plex Mono (metadados) |
+| `--serif` / `--sans` / `--mono` | Newsreader (títulos) · Archivo (interface e metadados) |
 
 `--paper` é igual à cor de fundo das gravuras, então as ilustrações encostam no papel sem
 costura visível.
 
-Componentes compartilhados: `barra-institucional`, `menu` (desktop inline / mobile em
+Componentes compartilhados: `menu` (desktop inline / mobile em
 `<details>`, sem JS), `pagehead` (banner + título), `hero`, `plate` (ilustração emoldurada
-com legenda), `btn`, `ficha`, `keylist`, `steps`, `data-table`, `news-list`, `notice`,
+com legenda), `btn`, `ficha`, `keylist`, `steps`, `data-table`, `news-card`, `notice`,
 `divider`, `site-footer`.
 
 Foco visível com contorno de 2px, claro no azul-marinho e escuro no cabeçalho de papel.

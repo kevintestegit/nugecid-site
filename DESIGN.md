@@ -1,13 +1,14 @@
 ---
 version: alpha
 colors:
-  primary: "#031c2b"
+  primary: "#101d2b"
   paper: "#f7f2e9"
   surface: "#fcf8f0"
   paperAlt: "#eee6d8"
   ink: "#071f34"
   inkSecondary: "#41515d"
-  navy: "#031c2b"
+  navy: "#101d2b"
+  gold: "#d4b07a"
   border: "#d8ccba"
 typography:
   display:
@@ -15,7 +16,7 @@ typography:
   body:
     fontFamily: "Archivo, system-ui, sans-serif"
   metadata:
-    fontFamily: "IBM Plex Mono, monospace"
+    fontFamily: "Archivo, system-ui, sans-serif"
 rounded:
   card: "5px"
   button: "4px"
@@ -42,13 +43,15 @@ nomes oficiais, contatos, estados de implantação ou informações históricas.
 Fonte canônica de implementação: `:root` em `assets/css/site.css`.
 O frontmatter documenta a mesma paleta: paper → --paper; surface → --paper-2;
 paperAlt → --paper-3; ink → --ink; inkSecondary → --ink-2; navy → --navy;
-border → --rule; primary → --navy. As classes compartilhadas consomem essas variáveis diretamente.
+border → --rule; primary → --navy; gold → --gold. As classes compartilhadas consomem essas variáveis diretamente.
+Dourado (`--gold`, `--gold-2`) marca o botão principal e destaques sobre o azul;
+`--gold-3` marca o item ativo da navegação e hovers sobre papel (contraste AA).
 Verde identifica “Em uso”; âmbar identifica “Em implantação”, sempre com texto explícito.
 
 ## Typography
 
-Newsreader para títulos e marca; Archivo para textos e navegação; IBM Plex Mono para
-metadados técnicos. Fontes locais licenciadas sob SIL OFL em `assets/fonts/`, com
+Newsreader para títulos e marca; Archivo para textos, navegação e metadados
+(`--mono` aponta para a mesma família). Fontes locais licenciadas sob SIL OFL em `assets/fonts/`, com
 fallbacks completos. Itálico reservado às frases editoriais e títulos de obras.
 
 ## Layout
@@ -64,6 +67,19 @@ Cada página de sistema mantém suas telas reais, recursos e avisos de acesso ex
 Papel, bordas finas e profundidade nas imagens de ambientação. Sombra contida somente na capa.
 A imagem `arquivo-editorial.webp` é ilustração gerada de ambientação: não é registro do acervo real.
 A capa `livro-capa.webp` e o brasão oficial são mantidos byte a byte.
+Gravuras (`plate`) recebem duotone sépia por filtro CSS para harmonizar com o papel.
+
+## Motion
+
+Somente CSS, sem JS, em `site.css` (seções 17 e 18), tudo dentro de
+`prefers-reduced-motion: no-preference` e de `@supports` para recursos de linha do tempo.
+Sem suporte ou com movimento reduzido, a página fica estática e completa.
+- Entrada: hero e `pagehead` sobem em sequência; destaque dourado do título com brilho único.
+- Rolagem: cabeçalho fixo que se condensa; revelação de cartões e blocos com `view()`;
+  parallax da imagem do hero; barra de progresso de leitura nas notícias.
+- Interação: sublinhado dourado da navegação, elevação de cartões, brilho no botão dourado,
+  disclosures com altura animada e menu mobile com ícone que vira X.
+- Navegação entre páginas: View Transitions entre documentos (`main` desliza e esmaece).
 
 ## Shapes
 
@@ -73,12 +89,15 @@ links de implantação apresentados como serviços já disponíveis.
 
 ## Components
 
-`archive-hero`: abertura editorial clara com imagem à direita.
-`capability`: resumo e atribuição oficial completa em disclosure.
-`system-card`: nome, status, página de detalhes e ficha completa expansível.
+`site-header`: faixa marfim com brasão, NUGECID e nome completo; nav Início, Sobre, Sistemas,
+Acervo, Notícias e Contato com sublinhado dourado no item ativo. Na home, recorte diagonal sob a marca.
+`archive-hero`: abertura azul-marinho com imagem de arquivo, título em caixa alta com destaque dourado.
+`capability`: faixa de quatro atribuições com ícone em círculo.
+`system-card`: nome, status, link “Conhecer o sistema”, captura de tela (home) e ficha expansível.
 `book-feature`: capa verdadeira, informação bibliográfica e link original ao PDF.
-`archive-feature`: faixa de memória institucional em azul profundo.
-`pagehead`: abertura compartilhada das páginas internas; variante clara para Sobre.
+`news-mini` / `news-card`: últimas notícias na home e grade de cartões em Notícias.
+`pagehead`: faixa azul-marinho das páginas internas, com breadcrumbs embutidos.
+`site-footer`: marca, navegação e contatos sobre azul-marinho.
 `related-news`: apenas artigos que existem no site.
 
 ## Do's and Don'ts
