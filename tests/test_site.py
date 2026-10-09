@@ -49,8 +49,8 @@ class SiteRegression(unittest.TestCase):
             page = Page(path)
             with self.subTest(page=path.name):
                 for href in ['mailto:arquivogeral@pci.rn.gov.br', 'tel:+558432326928',
-                             'index.html', 'sgc.html', 'ojs.html', 'dspace.html',
-                             'sistemas.html', 'sobre.html', 'noticias.html']:
+                             'index.html', 'sobre.html', 'sistemas.html', 'dspace.html',
+                             'noticias.html', 'sobre.html#contato']:
                     self.assertIn(href, page.links)
 
     def test_original_book_cover_and_pdf(self):
