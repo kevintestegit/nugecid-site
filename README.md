@@ -37,7 +37,7 @@ Tokens ficam no `:root` do `site.css`:
 | `--navy` / `--navy-2` / `--on-navy` | Cabeçalho, rodapé, links |
 | `--gold` / `--gold-2` / `--gold-3` | Botão principal, destaques e item ativo |
 | `--stamp` / `--green` | Carimbo de status |
-| `--serif` / `--sans` / `--mono` | Newsreader (títulos) · Archivo (interface) · IBM Plex Mono (metadados) |
+| `--serif` / `--sans` / `--mono` | Newsreader (títulos) · Archivo (interface e metadados) |
 
 `--paper` é igual à cor de fundo das gravuras, então as ilustrações encostam no papel sem
 costura visível.

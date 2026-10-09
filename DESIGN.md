@@ -16,7 +16,7 @@ typography:
   body:
     fontFamily: "Archivo, system-ui, sans-serif"
   metadata:
-    fontFamily: "IBM Plex Mono, monospace"
+    fontFamily: "Archivo, system-ui, sans-serif"
 rounded:
   card: "5px"
   button: "4px"
@@ -50,8 +50,8 @@ Verde identifica “Em uso”; âmbar identifica “Em implantação”, sempre 
 
 ## Typography
 
-Newsreader para títulos e marca; Archivo para textos e navegação; IBM Plex Mono para
-metadados técnicos. Fontes locais licenciadas sob SIL OFL em `assets/fonts/`, com
+Newsreader para títulos e marca; Archivo para textos, navegação e metadados
+(`--mono` aponta para a mesma família). Fontes locais licenciadas sob SIL OFL em `assets/fonts/`, com
 fallbacks completos. Itálico reservado às frases editoriais e títulos de obras.
 
 ## Layout
@@ -67,6 +67,19 @@ Cada página de sistema mantém suas telas reais, recursos e avisos de acesso ex
 Papel, bordas finas e profundidade nas imagens de ambientação. Sombra contida somente na capa.
 A imagem `arquivo-editorial.webp` é ilustração gerada de ambientação: não é registro do acervo real.
 A capa `livro-capa.webp` e o brasão oficial são mantidos byte a byte.
+Gravuras (`plate`) recebem duotone sépia por filtro CSS para harmonizar com o papel.
+
+## Motion
+
+Somente CSS, sem JS, em `site.css` (seções 17 e 18), tudo dentro de
+`prefers-reduced-motion: no-preference` e de `@supports` para recursos de linha do tempo.
+Sem suporte ou com movimento reduzido, a página fica estática e completa.
+- Entrada: hero e `pagehead` sobem em sequência; destaque dourado do título com brilho único.
+- Rolagem: cabeçalho fixo que se condensa; revelação de cartões e blocos com `view()`;
+  parallax da imagem do hero; barra de progresso de leitura nas notícias.
+- Interação: sublinhado dourado da navegação, elevação de cartões, brilho no botão dourado,
+  disclosures com altura animada e menu mobile com ícone que vira X.
+- Navegação entre páginas: View Transitions entre documentos (`main` desliza e esmaece).
 
 ## Shapes
 
